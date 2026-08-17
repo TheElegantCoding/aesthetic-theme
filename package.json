@@ -2,98 +2,49 @@
   "name": "aesthetic-theme",
   "displayName": "Aesthetic's Theme",
   "description": "My personal color schema themes for vscode",
+  "author": "Luis Monsalve",
   "version": "0.0.1",
   "private": true,
-  "license": "MIT",
-  "author": "Luis Monsalve",
-  "categories": [
-    "Themes"
-  ],
   "keywords": [
-    "icons",
     "vscode",
     "vscode-extension",
     "theme",
     "visual-studio-code",
-    "vsc-theme",
-    "vsc-icon-theme",
-    "vscode-icons",
-    "typescript",
-    "svg",
-    "svg-icons",
-    "eslint"
+    "vsc-theme"
   ],
-  "homepage": "https://github.com/AesthetiCoder/aesthetic_theme",
-  "bugs": "https://github.com/AesthetiCoder/aesthetic_theme/issues",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AesthetiCoder/aesthetic_theme"
-  },
+  "categories": ["Themes"],
+  "type": "module",
   "engines": {
-    "vscode": "^1.96.2",
-    "node": "^20.10.0",
-    "npm": "please-use-pnpm",
-    "yarn": "please-use-pnpm",
-    "pnpm": ">=7.14.0"
-  },
-  "activationEvents": [
-    "onStartupFinished"
-  ],
-  "main": "./dist/extension.js",
-  "scripts": {
-    "preinstall": "npx only-allow pnpm",
-    "postinstall": "git config core.hooksPath ./script/git_hook",
-    "type-check": "tsc --pretty --noEmit",
-    "lint": "eslint --color --ext .js,.ts --fix",
-    "generate": "pnpx nodemon",
-    "build": "rimraf dist && tsc",
-    "watch": "tsc -watch -p ./",
-    "compile": "tsc -p ./",
-    "package": "rimraf aesthetic-theme-0.0.1.vsix && vsce package --no-dependencies"
+    "vscode": "^1.125.0",
+    "node": ">=22.17.0",
+    "bun": ">=1.1.0"
   },
   "contributes": {
-    "iconThemes": [
-      {
-        "id": "aesthetic-icon-theme",
-        "label": "Aesthetic icons",
-        "path": "./dist/aesthetic_icon_theme.json",
-        "_watch": true
-      }
-    ],
-    "themes": [
-      {
-        "label": "Aesthetic's Theme",
-        "uiTheme": "vs-dark",
-        "path": "./dist/aesthetic_dark_theme.json"
-      }
-    ],
-    "configuration": {
-      "type": "object",
-      "title": "%configuration.title%",
-      "properties": {
-        "aesthetic-theme.activeIconPack": {
-          "type": "string",
-          "default": "react",
-          "description": "%configuration.activeIconPack%",
-          "enumDescriptions": [
-            "%configuration.activeIconPack.react%",
-            "%configuration.activeIconPack.qwik%",
-            "%configuration.activeIconPack.none%"
-          ],
-          "enum": [
-            "react",
-            "qwik",
-            "none"
-          ]
-        }
-      }
-    }
+    "themes": [{
+      "label": "Aesthetic's Theme",
+      "uiTheme": "vs-dark",
+      "path": "./dist/aesthetic_dark_theme.json"
+    }]
+  },
+  "scripts": {
+    "postinstall": "bunx gitlys init",
+    "preinstall": "npx only-allow bun",
+    "typecheck": "tsc --noEmit",
+    "release": "bun run build && bunx gitlys release",
+    "lint": "eslint --fix",
+    "build:theme": "bun src/global/util/generate_theme.ts",
+    "watch": "bun --hot src/global/util/generate_theme.ts",
+    "build": "tsup src/index.ts --format cjs --external vscode && npm run build:theme",
+    "package": "vsce package --no-dependencies",
+    "publish": "vsxpub --no-dependencies"
   },
   "devDependencies": {
-    "@types/node": "20.8.9",
-    "@types/vscode": "1.96.0",
-    "@vscode/vsce": "3.2.1",
-    "rimraf": "^5.0.5",
+    "@types/node": "26.2.0",
+    "@types/vscode": "1.125.0",
+    "@vscode/vsce": "3.9.2",
+    "eslint-config-universal-code": "1.1.1",
+    "gitlys": "2.2.1",
+    "tsup": "8.5.1",
     "typescript": "5.2.2"
   }
 }
