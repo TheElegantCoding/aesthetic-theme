@@ -1,21 +1,13 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { mkdir, writeFile } from 'node:fs/promises';
+import { resolve, dirname } from 'node:path';
 
-import { theme } from '../../module/vscode/theme';
-import { isFolder } from '../validator/is_folder';
+import { theme } from '../../module/theme/theme';
 
-const generateTheme = (): void =>
-{
-  const space = 2;
+const outputPath = resolve(process.cwd(), 'dist/aesthetic_dark_theme.json');
 
-  if(!isFolder('./dist'))
-  {
-    mkdirSync('./dist', { recursive: false });
-  }
-
-  const path = join(__dirname, '..', '..', '..', './dist/aesthetic_dark_theme.json');
-
-  writeFileSync(path, JSON.stringify(theme, undefined, space));
+const buildTheme = async () => {
+  await mkdir(dirname(outputPath), { recursive: true });
+  await writeFile(outputPath, JSON.stringify(theme, null, 2), 'utf-8');
 };
 
-export { generateTheme };
+await buildTheme();

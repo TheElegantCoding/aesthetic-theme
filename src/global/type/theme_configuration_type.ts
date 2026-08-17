@@ -1,5 +1,4 @@
-type ThemeConfigurationType =
-{
+type ThemeConfigType = {
   key: string;
   globalValue?: unknown;
   defaultValue?: unknown;
@@ -12,4 +11,4 @@ type ThemeConfigurationType =
   workspaceFolderLanguageValue?: unknown;
 };
 
-export type { ThemeConfigurationType };
+export type { ThemeConfigType as ThemeConfigurationType };
