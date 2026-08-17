@@ -1,5 +1,11 @@
 import {
-  sky, gray, cyan, purple, warning, emerald, information
+  sky,
+  gray,
+  cyan,
+  blue,
+  purple,
+  yellow,
+  emerald
 } from '../../../global/theme/color';
 
 const markdown = [
@@ -12,10 +18,7 @@ const markdown = [
   },
   {
     name: 'Markdown Titles',
-    scope: [
-      'entity.name.section.markdown',
-      'punctuation.definition.heading.markdown'
-    ],
+    scope: ['entity.name.section.markdown', 'punctuation.definition.heading.markdown'],
     settings: {
       fontStyle: 'bold',
       foreground: cyan.cyan_500
@@ -34,14 +37,14 @@ const markdown = [
     scope: 'markup.bold.markdown',
     settings: {
       fontStyle: 'bold',
-      foreground: information.information_500
+      foreground: blue.blue_500
     }
   },
   {
     name: 'Markdown strikethrough',
     scope: 'markup.strikethrough.markdown',
     settings: {
-      foreground: warning.warning_600
+      foreground: yellow.yellow_600
     }
   },
   {
@@ -57,12 +60,9 @@ const markdown = [
   },
   {
     name: 'Markdown link',
-    scope: [
-      'markup.underline.link.markdown',
-      'markup.underline.link.image.markdown'
-    ],
+    scope: ['markup.underline.link.markdown', 'markup.underline.link.image.markdown'],
     settings: {
-      foreground: information.information_500
+      foreground: blue.blue_500
     }
   },
   {
@@ -76,15 +76,12 @@ const markdown = [
     name: 'Markdown code',
     scope: 'markup.fenced_code.block.markdown',
     settings: {
-      foreground: information.information_500
+      foreground: blue.blue_500
     }
   },
   {
     name: 'Markdown code definition',
-    scope: [
-      'fenced_code.block.language.markdown',
-      'punctuation.definition.raw.markdown'
-    ],
+    scope: ['fenced_code.block.language.markdown', 'punctuation.definition.raw.markdown'],
     settings: {
       fontStyle: 'bold',
       foreground: cyan.cyan_500
@@ -92,13 +89,10 @@ const markdown = [
   },
   {
     name: 'Markdown List',
-    scope: [
-      'markup.list.unnumbered.markdown',
-      'markup.list.numbered.markdown'
-    ],
+    scope: ['markup.list.unnumbered.markdown', 'markup.list.numbered.markdown'],
     settings: {
       fontStyle: 'bold',
-      foreground: information.information_500
+      foreground: blue.blue_500
     }
   },
   {
