@@ -1,22 +1,14 @@
-node_modules
-*.vsix
-
-# Source
-.github/
-script/
-.vscode/
-src/
-test/
-
-# Dev config files
-.nvmrc
-.npmrc
-.lintstagedrc
-.editorconfig
-.eslintrc
-.eslintignore
-.gitattributes
+.vscode/**
+.vscode-test/**
+out/**
+node_modules/**
+src/**
 .gitignore
-nodemon.json
-tsconfig.json
-*.md
+.yarnrc
+esbuild.js
+vsc-extension-quickstart.md
+**/tsconfig.json
+**/eslint.config.mjs
+**/*.map
+**/*.ts
+**/.vscode-test.*
