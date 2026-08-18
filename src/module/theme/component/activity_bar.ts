@@ -1,20 +1,19 @@
 import {
   base,
-  gray,
   blue,
+  gray,
+  neutral,
   background
-} from '../../../global/theme/color';
+} from '@global/theme/color';
 
 const activityBar = {
+  'activityBar.foreground': neutral.neutral_300,
   'activityBar.background': background.background_900,
-  'activityBar.border': base.transparent,
   'activityBar.dropBackground': background.background_900,
-  'activityBar.foreground': gray.gray_500,
-
   'activityBar.inactiveForeground': gray.gray_600,
-  'activityBarBadge.background': blue.blue_600,
-
-  'activityBarBadge.foreground': gray.gray_300
+  'activityBarBadge.background': blue.blue_700,
+  'activityBarBadge.foreground': gray.gray_200,
+  'activityBar.border': base.transparent
 };
 
 export { activityBar };
