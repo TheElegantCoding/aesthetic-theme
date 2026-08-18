@@ -6,10 +6,8 @@ import { json } from './syntax/json';
 import { markdown } from './syntax/markdown';
 
 const theme = {
-  colors: {
-    ...global
-  },
-  name: 'Aesthetic\'s Theme',
+  colors: global,
+  name: 'Aesthetic theme',
   tokenColors: [
     ...jsTs,
     ...common,
