@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "rootDir": "./",
-    "module": "CommonJS",
+    "module": "esnext",
     "paths": {
       "@global/*": ["./src/global/*"],
       "@module/*": ["./src/module/*"],
