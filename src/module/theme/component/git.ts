@@ -1,21 +1,23 @@
 import {
   red,
   gray,
-  blue,
   green,
-  purple
-} from '../../../global/theme/color';
+  purple,
+  yellow
+} from '@global/theme/color';
 
 const git = {
-  'gitDecoration.addedResourceForeground': green.green_600,
-  'gitDecoration.conflictingResourceForeground': purple.purple_700,
-  'gitDecoration.deletedResourceForeground': red.red_600,
-  'gitDecoration.ignoredResourceForeground': gray.gray_700,
-  'gitDecoration.modifiedResourceForeground': blue.blue_600,
+  'gitDecoration.addedResourceForeground': green.green_500,
+  'gitDecoration.untrackedResourceForeground': green.green_700,
+  'gitDecoration.deletedResourceForeground': red.red_500,
   'gitDecoration.stageDeletedResourceForeground': red.red_700,
-  'gitDecoration.stageModifiedResourceForeground': blue.blue_800,
-  'gitDecoration.submoduleResourceForeground': blue.blue_700,
-  'gitDecoration.untrackedResourceForeground': green.green_700
+  'gitDecoration.modifiedResourceForeground': yellow.yellow_500,
+  'gitDecoration.submoduleResourceForeground': yellow.yellow_700,
+  'gitDecoration.stageModifiedResourceForeground': yellow.yellow_800,
+  'gitDecoration.conflictingResourceForeground': purple.purple_700,
+  'gitDecoration.ignoredResourceForeground': gray.gray_500,
+
+  'editorCodeLens.foreground': gray.gray_400
 };
 
 export { git };
