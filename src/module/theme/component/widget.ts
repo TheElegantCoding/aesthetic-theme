@@ -17,7 +17,9 @@ const widget = {
   'editorWidget.background': background.background_800,
   'editorWidget.resizeBorder': gray.gray_500,
   'editorWidget.border': base.transparent,
-  'widget.shadow': base.black
+  'widget.shadow': base.black,
+
+  'debugToolBar.background': background.background_800
 };
 
 export { widget };
