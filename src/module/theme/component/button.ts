@@ -6,7 +6,9 @@ const button = {
   'button.hoverBackground': blue.blue_700,
   'button.secondaryBackground': gray.gray_600,
   'button.secondaryForeground': gray.gray_100,
-  'button.secondaryHoverBackground': gray.gray_500
+  'button.secondaryHoverBackground': gray.gray_500,
+
+  'textLink.foreground': blue.blue_500
 };
 
 export { button };
