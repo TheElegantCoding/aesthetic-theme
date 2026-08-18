@@ -1,10 +1,10 @@
-import { gray, base, background } from '../../../global/theme/color';
+import { base, background } from '@global/theme/color';
 
 const scrollbar = {
   'scrollbar.shadow': base.black,
-  'scrollbarSlider.activeBackground': gray.gray_800,
-  'scrollbarSlider.background': background.background_900,
-  'scrollbarSlider.hoverBackground': gray.gray_900
+  'scrollbarSlider.background': background.background_800,
+  'scrollbarSlider.hoverBackground': background.background_700,
+  'scrollbarSlider.activeBackground': background.background_600
 };
 
 export { scrollbar };
