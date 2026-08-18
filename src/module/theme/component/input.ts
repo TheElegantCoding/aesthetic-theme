@@ -11,6 +11,7 @@ const input = {
   'input.background': background.background_700,
   'input.foreground': gray.gray_200,
   'input.placeholderForeground': gray.gray_700,
+  'inputOption.activeBackground': background.background_700,
   'inputOption.activeBorder': blue.blue_600,
   'inputValidation.errorBackground': red.red_900,
   'inputValidation.errorBorder': base.transparent,
