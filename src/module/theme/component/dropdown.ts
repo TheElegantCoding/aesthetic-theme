@@ -1,9 +1,13 @@
-import { base, gray, blue } from '../../../global/theme/color';
+import {
+  base,
+  gray,
+  background
+} from '@global/theme/color';
 
 const dropdown = {
-  'dropdown.background': base.black,
-  'dropdown.border': blue.blue_600,
-  'dropdown.foreground': gray.gray_300
+  'dropdown.background': background.background_700,
+  'dropdown.border': base.transparent,
+  'dropdown.foreground': gray.gray_100
 };
 
 export { dropdown };
