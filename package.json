@@ -40,9 +40,9 @@
   },
   "devDependencies": {
     "@types/node": "26.2.0",
-    "@types/vscode": "1.125.0",
+    "@types/vscode": "1.134.0",
     "@vscode/vsce": "3.9.2",
-    "eslint-config-universal-code": "1.1.1",
+    "eslint-config-universal-code": "1.1.2",
     "gitlys": "2.2.1",
     "tsup": "8.5.1",
     "typescript": "5.2.2"
