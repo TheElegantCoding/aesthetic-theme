@@ -197,6 +197,26 @@ const amber = {
   amber_900: '#78350F'
 };
 
+const defaultPalette = {
+  base,
+  gray,
+  neutral,
+  cyan,
+  blue,
+  indigo,
+  sky,
+  red,
+  rose,
+  yellow,
+  lime,
+  green,
+  emerald,
+  purple,
+  orange,
+  amber,
+  background
+};
+
 export {
   sky,
   red,
@@ -214,5 +234,6 @@ export {
   yellow,
   emerald,
   neutral,
-  background
+  background,
+  defaultPalette
 };
