@@ -1,12 +1,15 @@
 type ColorType = Record<string, string>;
 
-type Pallete = {
+type Palette = {
   base: ColorType;
   gray: ColorType;
   blue: ColorType;
   cyan: ColorType;
   lime: ColorType;
   rose: ColorType;
+  red: ColorType;
+  sky: ColorType;
+  amber: ColorType;
   green: ColorType;
   indigo: ColorType;
   purple: ColorType;
@@ -17,4 +20,4 @@ type Pallete = {
   background: ColorType;
 };
 
-export type { Pallete, ColorType };
+export type { Palette, ColorType };
