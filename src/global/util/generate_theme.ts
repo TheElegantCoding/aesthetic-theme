@@ -1,7 +1,6 @@
+import { theme } from '@module/theme/theme';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
-
-import { theme } from '../../module/theme/theme';
 
 const outputPath = resolve(process.cwd(), 'dist/aesthetic_dark_theme.json');
 
