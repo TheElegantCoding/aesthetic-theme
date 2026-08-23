@@ -4,7 +4,7 @@ import {
   gray,
   neutral,
   background
-} from '@global/theme/color';
+} from '@global/style/color';
 
 const activityBar = {
   'activityBar.foreground': neutral.neutral_300,
