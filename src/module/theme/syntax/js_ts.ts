@@ -1,28 +1,32 @@
-import { gray, cyan } from '../../../global/style/color';
+import type { Palette } from '@global/type/color_scheme_type';
 
-const jsTs = [
-  {
-    name: 'TS types',
-    scope: 'support.type.primitive.ts',
-    settings: {
-      fontStyle: 'bold',
-      foreground: cyan.cyan_600
-    }
-  },
-  {
-    name: 'Template string',
-    scope: 'meta.template.expression.ts',
-    settings: {
-      foreground: gray.gray_300
-    }
-  },
-  {
-    name: 'Vite variable meta',
-    scope: 'support.variable.property.importmeta.tsx',
-    settings: {
-      foreground: gray.gray_300
-    }
-  }
-];
+const getJsTs = (colors: Palette) => {
+  const { gray, cyan } = colors;
 
-export { jsTs };
+  return [
+    {
+      name: 'TS types',
+      scope: 'support.type.primitive.ts',
+      settings: {
+        fontStyle: 'bold',
+        foreground: cyan.cyan_600
+      }
+    },
+    {
+      name: 'Template string',
+      scope: 'meta.template.expression.ts',
+      settings: {
+        foreground: gray.gray_300
+      }
+    },
+    {
+      name: 'Vite variable meta',
+      scope: 'support.variable.property.importmeta.tsx',
+      settings: {
+        foreground: gray.gray_300
+      }
+    }
+  ];
+};
+
+export { getJsTs };

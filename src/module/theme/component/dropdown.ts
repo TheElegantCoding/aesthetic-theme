@@ -1,13 +1,13 @@
-import {
-  base,
-  gray,
-  background
-} from '@global/style/color';
+import type { Palette } from '@global/type/color_scheme_type';
 
-const dropdown = {
-  'dropdown.background': background.background_700,
-  'dropdown.border': base.transparent,
-  'dropdown.foreground': gray.gray_100
+const getDropdown = (colors: Palette) => {
+  const { base, gray, background } = colors;
+
+  return {
+    'dropdown.background': background.background_700,
+    'dropdown.border': base.transparent,
+    'dropdown.foreground': gray.gray_100
+  };
 };
 
-export { dropdown };
+export { getDropdown };

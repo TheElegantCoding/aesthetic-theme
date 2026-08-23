@@ -1,24 +1,28 @@
-import {
-  red,
-  gray,
-  yellow,
-  background
-} from '@global/style/color';
+import type { Palette } from '@global/type/color_scheme_type';
 
-const statusBar = {
-  'statusBar.background': background.background_800,
-  'statusBar.foreground': gray.gray_300,
-  'statusBar.noFolderBackground': background.background_800,
-  'statusBarItem.remoteBackground': background.background_700,
-  'statusBarItem.remoteForeground': gray.gray_300,
+const getStatusBar = (colors: Palette) => {
+  const {
+    red,
+    gray,
+    yellow,
+    background
+  } = colors;
 
-  'statusBar.debuggingBackground': background.background_700,
-  'statusBarItem.activeBackground': background.background_600,
-  'statusBarItem.hoverBackground': background.background_600,
-  'statusBarItem.errorBackground': red.red_900,
-  'statusBarItem.errorForeground': red.red_200,
-  'statusBarItem.warningBackground': yellow.yellow_900,
-  'statusBarItem.warningForeground': yellow.yellow_200
+  return {
+    'statusBar.background': background.background_800,
+    'statusBar.foreground': gray.gray_300,
+    'statusBar.noFolderBackground': background.background_800,
+    'statusBarItem.remoteBackground': background.background_700,
+    'statusBarItem.remoteForeground': gray.gray_300,
+
+    'statusBar.debuggingBackground': background.background_700,
+    'statusBarItem.activeBackground': background.background_600,
+    'statusBarItem.hoverBackground': background.background_600,
+    'statusBarItem.errorBackground': red.red_900,
+    'statusBarItem.errorForeground': red.red_200,
+    'statusBarItem.warningBackground': yellow.yellow_900,
+    'statusBarItem.warningForeground': yellow.yellow_200
+  };
 };
 
-export { statusBar };
+export { getStatusBar };
