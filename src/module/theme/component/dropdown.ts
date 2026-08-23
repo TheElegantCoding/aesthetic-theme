@@ -2,7 +2,7 @@ import {
   base,
   gray,
   background
-} from '@global/theme/color';
+} from '@global/style/color';
 
 const dropdown = {
   'dropdown.background': background.background_700,

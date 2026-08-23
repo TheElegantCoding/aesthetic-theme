@@ -3,7 +3,7 @@ import {
   blue,
   gray,
   background
-} from '@global/theme/color';
+} from '@global/style/color';
 import { alpha } from '@global/util/alpha';
 
 const tab = {

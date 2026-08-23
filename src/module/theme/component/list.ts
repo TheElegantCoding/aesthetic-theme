@@ -4,7 +4,7 @@ import {
   base,
   blue,
   background
-} from '@global/theme/color';
+} from '@global/style/color';
 
 const list = {
   'list.dropBackground': base.black,

@@ -1,4 +1,4 @@
-import { neutral, background, gray } from '@global/theme/color';
+import { gray, neutral, background } from '@global/style/color';
 
 const breadcrumbs = {
   'breadcrumb.background': background.background_900,

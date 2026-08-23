@@ -1,4 +1,4 @@
-import { gray, base, background } from '../../../global/theme/color';
+import { gray, base, background } from '../../../global/style/color';
 
 const widget = {
   'editorHoverWidget.background': background.background_900,

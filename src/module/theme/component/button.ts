@@ -1,4 +1,4 @@
-import { blue, gray } from '@global/theme/color';
+import { blue, gray } from '@global/style/color';
 
 const button = {
   'button.background': blue.blue_800,

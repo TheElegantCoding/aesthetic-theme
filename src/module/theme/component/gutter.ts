@@ -1,11 +1,11 @@
 import {
   red,
+  gray,
   green,
   yellow,
   neutral,
-  background,
-  gray
-} from '@global/theme/color';
+  background
+} from '@global/style/color';
 
 const gutter = {
   'editorGutter.addedBackground': green.green_500,

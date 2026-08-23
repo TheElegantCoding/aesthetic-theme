@@ -1,4 +1,4 @@
-import { gray, background } from '@global/theme/color';
+import { gray, background } from '@global/style/color';
 
 const panel = {
   'panel.background': background.background_900,

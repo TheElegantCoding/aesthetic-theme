@@ -4,7 +4,7 @@ import {
   green,
   purple,
   yellow
-} from '@global/theme/color';
+} from '@global/style/color';
 
 const git = {
   'gitDecoration.addedResourceForeground': green.green_500,

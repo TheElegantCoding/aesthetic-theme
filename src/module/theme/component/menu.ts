@@ -1,4 +1,4 @@
-import { base, gray, background } from '@global/theme/color';
+import { base, gray, background } from '@global/style/color';
 
 const menu = {
   'menu.background': background.background_800,

@@ -4,7 +4,7 @@ import {
   blue,
   amber,
   emerald
-} from '../../../global/theme/color';
+} from '../../../global/style/color';
 
 const css = [
   {

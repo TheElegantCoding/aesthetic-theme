@@ -5,7 +5,7 @@ import {
   base,
   yellow,
   background
-} from '@global/theme/color';
+} from '@global/style/color';
 
 const notifications = {
   'notificationCenter.background': background.background_800,

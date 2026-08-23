@@ -1,4 +1,4 @@
-import { gray, cyan } from '../../../global/theme/color';
+import { gray, cyan } from '../../../global/style/color';
 
 const jsTs = [
   {

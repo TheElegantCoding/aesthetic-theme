@@ -1,4 +1,4 @@
-import { gray, base, background } from '@global/theme/color';
+import { gray, base, background } from '@global/style/color';
 import { alpha } from '@global/util/alpha';
 
 const sidebar = {

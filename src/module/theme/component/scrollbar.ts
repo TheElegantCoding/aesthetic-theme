@@ -1,4 +1,4 @@
-import { base, background } from '@global/theme/color';
+import { base, background } from '@global/style/color';
 
 const scrollbar = {
   'scrollbar.shadow': base.black,

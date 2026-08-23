@@ -1,4 +1,4 @@
-import { gray, base, background } from '@global/theme/color';
+import { gray, base, background } from '@global/style/color';
 
 const titleBar = {
   'titleBar.background': background.background_900,

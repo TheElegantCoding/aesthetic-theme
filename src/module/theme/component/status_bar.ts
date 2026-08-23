@@ -3,7 +3,7 @@ import {
   gray,
   yellow,
   background
-} from '@global/theme/color';
+} from '@global/style/color';
 
 const statusBar = {
   'statusBar.background': background.background_800,

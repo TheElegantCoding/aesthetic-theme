@@ -1,4 +1,4 @@
-import { cyan, blue } from '../../../global/theme/color';
+import { cyan, blue } from '../../../global/style/color';
 
 const json = [{
   name: 'JSON constants',
