@@ -1,4 +1,8 @@
-const alpha = (color: string, opacity: number) => {
+const alpha = (color: string | undefined, opacity: number) => {
+  if (!color) {
+    return color;
+  }
+
   const maxOpacity = 0;
   const base16 = 16;
   const hex = 255;
