@@ -7,9 +7,9 @@ const getPeekView = (colors: Palette) => {
 
   return {
     'peekView.border': gray.gray_500,
-    'peekViewEditor.background': background.background_900,
-    'peekViewEditorGutter.background': background.background_900,
-    'peekViewResult.background': background.background_900,
+    'peekViewEditor.background': background.background_950,
+    'peekViewEditorGutter.background': background.background_950,
+    'peekViewResult.background': background.background_950,
     'peekViewResult.fileForeground': gray.gray_200,
     'peekViewResult.lineForeground': gray.gray_400,
     'peekViewResult.selectionForeground': gray.gray_200,
