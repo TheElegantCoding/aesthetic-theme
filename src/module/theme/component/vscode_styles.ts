@@ -47,7 +47,6 @@ const getVscodeStyles = (colors: Palette) => {
     ...getList(colors),
     ...getActivityBar(colors),
     ...getSidebar(colors),
-    ...getTab(colors),
     ...getTerminal(colors),
     ...getOverviewRuler(colors),
     ...getGutter(colors),
@@ -56,7 +55,8 @@ const getVscodeStyles = (colors: Palette) => {
     ...getStatusBar(colors),
     ...getNotifications(colors),
     ...getGit(colors),
-    ...getDiffEditor(colors)
+    ...getDiffEditor(colors),
+    ...getTab(colors)
   };
 };
 
