@@ -5,13 +5,15 @@ const base = {
 };
 
 const background = {
-  background_500: '#51545c',
-  background_600: '#3e4047',
-  background_700: '#27282a',
-  background_800: '#131416',
-  background_900: '#0f1013',
-  background_950: '#08090c'
+  background_500: '#525e84',
+  background_600: '#4a557f',
+  background_700: '#2a2f46',
+  background_800: '#171a26',
+  background_900: '#30354a',
+  background_950: '#0d0e14'
 };
+
+const darkBackground = '#090a0f';
 
 const gray = {
   gray_50: '#F9FAFB',
@@ -217,23 +219,15 @@ const defaultPalette = {
   background
 };
 
+const darkerPalette = {
+  ...defaultPalette,
+  background: {
+    ...defaultPalette.background,
+    background_950: darkBackground
+  }
+};
+
 export {
-  sky,
-  red,
-  base,
-  gray,
-  cyan,
-  lime,
-  rose,
-  blue,
-  amber,
-  green,
-  indigo,
-  purple,
-  orange,
-  yellow,
-  emerald,
-  neutral,
-  background,
+  darkerPalette,
   defaultPalette
 };
