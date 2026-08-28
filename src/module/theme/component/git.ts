@@ -18,7 +18,7 @@ const getGit = (colors: Palette) => {
     'gitDecoration.submoduleResourceForeground': yellow.yellow_700,
     'gitDecoration.stageModifiedResourceForeground': yellow.yellow_800,
     'gitDecoration.conflictingResourceForeground': purple.purple_500,
-    'gitDecoration.ignoredResourceForeground': gray.gray_500,
+    'gitDecoration.ignoredResourceForeground': gray.gray_700,
 
     'editorCodeLens.foreground': gray.gray_400
   };
