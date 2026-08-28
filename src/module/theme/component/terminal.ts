@@ -7,7 +7,7 @@ const getTerminal = (colors: Palette) => {
 
   return {
     'terminal.border': gray.gray_500,
-    'terminal.background': background.background_900,
+    'terminal.background': background.background_950,
     'terminal.foreground': gray.gray_200,
     'terminal.selectionBackground': alpha(gray.gray_500, 0.35),
     'terminalCursor.background': gray.gray_300,
