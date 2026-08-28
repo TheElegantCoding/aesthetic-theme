@@ -9,9 +9,9 @@ const getActivityBar = (colors: Palette) => {
   } = colors;
 
   return {
-    'activityBar.foreground': gray.gray_300,
-    'activityBar.background': background.background_900,
-    'activityBar.dropBackground': background.background_900,
+    'activityBar.foreground': gray.gray_200,
+    'activityBar.background': background.background_950,
+    'activityBar.dropBackground': background.background_950,
     'activityBar.inactiveForeground': gray.gray_600,
     'activityBarBadge.background': blue.blue_700,
     'activityBarBadge.foreground': gray.gray_200,
