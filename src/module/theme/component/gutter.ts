@@ -12,7 +12,7 @@ const getGutter = (colors: Palette) => {
 
   return {
     'editorGutter.addedBackground': green.green_500,
-    'editorGutter.background': background.background_900,
+    'editorGutter.background': background.background_950,
     'editorGutter.deletedBackground': red.red_500,
     'editorGutter.foldingControlForeground': neutral.neutral_400,
     'editorGutter.modifiedBackground': yellow.yellow_500,
