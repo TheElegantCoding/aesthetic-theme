@@ -39,7 +39,7 @@
     "publish": "vsxpub --no-dependencies"
   },
   "devDependencies": {
-    "@types/node": "26.2.0",
+    "@types/node": "26.4.0",
     "@types/vscode": "1.134.0",
     "@vscode/vsce": "3.9.2",
     "eslint-config-universal-code": "1.1.2",
