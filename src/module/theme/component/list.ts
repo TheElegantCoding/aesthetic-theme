@@ -25,7 +25,7 @@ const getList = (colors: Palette) => {
     'list.filterWidget.outline': gray.gray_400,
     'list.filterWidget.noMatchesOutline': red.red_600,
 
-    'tree.indentGuidesStroke': gray.gray_700
+    'tree.indentGuidesStroke': gray.gray_800
   };
 };
 
