@@ -4,7 +4,7 @@ const getPanel = (colors: Palette) => {
   const { gray, background } = colors;
 
   return {
-    'panel.background': background.background_900,
+    'panel.background': background.background_950,
     'panel.border': gray.gray_500,
     'panelTitle.activeBorder': gray.gray_500,
     'panelTitle.activeForeground': gray.gray_200,
