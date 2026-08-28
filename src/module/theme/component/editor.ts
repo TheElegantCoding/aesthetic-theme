@@ -16,7 +16,7 @@ const getEditor = (colors: Palette) => {
 
   return {
     'editor.background': background.background_950,
-    'editor.foreground': gray.gray_100,
+    'editor.foreground': gray.gray_400,
     'editorCursor.foreground': gray.gray_300,
     'editorCursor.background': gray.gray_950,
 
@@ -48,7 +48,7 @@ const getEditor = (colors: Palette) => {
     'editor.foldBackground': alpha(gray.gray_700, 0.35),
     'editor.lineHighlightBackground': alpha(gray.gray_700, 0.2),
     'editorBracketMatch.background': alpha(gray.gray_700, 0.35),
-    'editorIndentGuide.background': gray.gray_700,
+    'editorIndentGuide.background': gray.gray_800,
     'editorGutter.foldingControlForeground': gray.gray_300,
 
     'editorLink.activeForeground': blue.blue_500,
