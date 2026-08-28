@@ -5,9 +5,9 @@ const getScrollbar = (colors: Palette) => {
 
   return {
     'scrollbar.shadow': base.black,
-    'scrollbarSlider.background': background.background_800,
-    'scrollbarSlider.hoverBackground': background.background_700,
-    'scrollbarSlider.activeBackground': background.background_600
+    'scrollbarSlider.background': background.background_700,
+    'scrollbarSlider.hoverBackground': background.background_600,
+    'scrollbarSlider.activeBackground': background.background_500
   };
 };
 
