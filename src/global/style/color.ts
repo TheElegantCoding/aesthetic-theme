@@ -8,7 +8,7 @@ const background = {
   background_500: '#51545c',
   background_600: '#3e4047',
   background_700: '#27282a',
-  background_800: '#18191b',
+  background_800: '#131416',
   background_900: '#0f1013',
   background_950: '#08090c'
 };
