@@ -15,7 +15,7 @@ const getEditor = (colors: Palette) => {
   } = colors;
 
   return {
-    'editor.background': background.background_900,
+    'editor.background': background.background_950,
     'editor.foreground': gray.gray_100,
     'editorCursor.foreground': gray.gray_300,
     'editorCursor.background': gray.gray_950,
@@ -53,7 +53,7 @@ const getEditor = (colors: Palette) => {
 
     'editorLink.activeForeground': blue.blue_500,
 
-    'editorMarkerNavigation.background': background.background_900,
+    'editorMarkerNavigation.background': background.background_950,
     'editorMarkerNavigationError.background': red.red_600,
     'editorMarkerNavigationInfo.background': blue.blue_600,
     'editorMarkerNavigationWarning.background': yellow.yellow_600,
