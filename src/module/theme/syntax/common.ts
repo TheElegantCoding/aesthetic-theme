@@ -6,6 +6,7 @@ const getCommon = (colors: Palette) => {
     cyan,
     blue,
     amber,
+    indigo,
     emerald
   } = colors;
 
@@ -54,8 +55,8 @@ const getCommon = (colors: Palette) => {
       name: 'Variable, number, Built-in constants, separators like ; or ,',
       scope: [
         'variable',
-        'variable.parameter',
-        'variable.parameter.function-call',
+        // 'variable.parameter',
+        // 'variable.parameter.function-call',
         'variable.other',
         'variable.language',
         'punctuation.separator',
@@ -68,10 +69,29 @@ const getCommon = (colors: Palette) => {
       }
     },
     {
+      name: 'Variable parameter',
+      scope: ['variable.parameter', 'variable.parameter.function-call'],
+      settings: {
+        foreground: amber.amber_600
+      }
+    },
+    {
       name: 'Function name and arguments',
       scope: 'entity.name.function',
       settings: {
         foreground: gray.gray_300
+      }
+    },
+    {
+      name: 'Function calls only',
+      scope: [
+        'meta.function-call entity.name.function',
+        'meta.function-call support.function',
+        'meta.function-call variable.other.readwrite',
+        'support.function.any-method'
+      ],
+      settings: {
+        foreground: indigo.indigo_400
       }
     },
     {
