@@ -4,11 +4,11 @@ const getTitleBar = (colors: Palette) => {
   const { gray, base, background } = colors;
 
   return {
-    'titleBar.background': background.background_900,
-    'titleBar.activeBackground': background.background_900,
-    'titleBar.activeForeground': gray.gray_200,
-    'titleBar.inactiveBackground': background.background_900,
-    'titleBar.inactiveForeground': gray.gray_200,
+    'titleBar.background': background.background_950,
+    'titleBar.activeBackground': background.background_950,
+    'titleBar.activeForeground': gray.gray_400,
+    'titleBar.inactiveBackground': background.background_950,
+    'titleBar.inactiveForeground': gray.gray_400,
     'titleBar.border': base.transparent
   };
 };
