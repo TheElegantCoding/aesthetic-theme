@@ -6,8 +6,8 @@ const getSidebar = (colors: Palette) => {
   const { gray, base, background } = colors;
 
   return {
-    'sideBar.background': background.background_900,
-    'sideBar.foreground': gray.gray_400,
+    'sideBar.background': background.background_950,
+    'sideBar.foreground': gray.gray_500,
     'sideBar.border': background.background_700,
     'sideBarTitle.foreground': gray.gray_400,
     'sideBarSectionHeader.background': background.background_800,
