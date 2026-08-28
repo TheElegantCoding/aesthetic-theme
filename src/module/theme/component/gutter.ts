@@ -18,7 +18,7 @@ const getGutter = (colors: Palette) => {
     'editorGutter.modifiedBackground': yellow.yellow_500,
     'editorGutter.commentRangeForeground': neutral.neutral_600,
     'editorGutter.itemHoverBackground': background.background_800,
-    'editorLineNumber.activeForeground': gray.gray_200,
+    'editorLineNumber.activeForeground': gray.gray_300,
     'editorLineNumber.foreground': gray.gray_500
   };
 };
