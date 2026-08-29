@@ -1,6 +1,7 @@
 type ColorType = Record<string, string>;
 
 type Palette = {
+  syntax: ColorType;
   base: ColorType;
   gray: ColorType;
   blue: ColorType;
