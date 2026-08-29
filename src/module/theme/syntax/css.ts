@@ -1,31 +1,9 @@
 import type { Palette } from '@global/type/color_scheme_type';
 
 const getCss = (colors: Palette) => {
-  const {
-    cyan,
-    gray,
-    blue,
-    amber,
-    emerald,
-    purple,
-    green
-  } = colors;
+  const { gray, syntax } = colors;
 
   return [
-    {
-      name: 'CSS Class and Support - Property Name',
-      scope: [
-        'source.css support.type.property-name',
-        'source.sass support.type.property-name',
-        'source.scss support.type.property-name',
-        'source.less support.type.property-name',
-        'source.stylus support.type.property-name',
-        'source.postcss support.type.property-name'
-      ],
-      settings: {
-        foreground: blue.blue_600
-      }
-    },
     {
       name: 'CSS Class and Support - Property Value',
       scope: [
@@ -56,43 +34,6 @@ const getCss = (colors: Palette) => {
       }
     },
     {
-      name: 'CSS and sass pseudo elements',
-      scope: [
-        'entity.other.attribute-name.pseudo-element.css',
-        'entity.other.attribute-name.pseudo-class.css',
-        'entity.name.tag.reference.scss'
-      ],
-      settings: {
-        fontStyle: 'bold',
-        foreground: cyan.cyan_500
-      }
-    },
-    {
-      name: 'Css regex character',
-      scope: 'constant.character.escape.scss',
-      settings: {
-        foreground: emerald.emerald_200
-      }
-    },
-    {
-      name: 'CSS constants and entities',
-      scope: ['support.constant.property-value.css', 'entity.name.tag.css'],
-      settings: {
-        foreground: cyan.cyan_500
-      }
-    },
-    {
-      name: 'CSS Font',
-      scope: [
-        'support.constant.font-name',
-        'meta.attribute-selector.scss',
-        'meta.definition.variable'
-      ],
-      settings: {
-        foreground: emerald.emerald_600
-      }
-    },
-    {
       name: 'CSS punctuation',
       scope: [
         'support.type.property-name.media.css',
@@ -107,11 +48,83 @@ const getCss = (colors: Palette) => {
       }
     },
     {
+      name: 'Css if and media',
+      scope: ['meta.at-rule.if.scss', 'support.constant.media.css'],
+      settings: {
+        foreground: gray.gray_300
+      }
+    },
+    {
+      name: 'Sass punctuation',
+      scope: ['meta.property-value.scss'],
+      settings: {
+        foreground: gray.gray_300
+      }
+    },
+    {
+      name: 'CSS Class and Support - Property Name',
+      scope: [
+        'source.css support.type.property-name',
+        'source.sass support.type.property-name',
+        'source.scss support.type.property-name',
+        'source.less support.type.property-name',
+        'source.stylus support.type.property-name',
+        'source.postcss support.type.property-name'
+      ],
+      settings: {
+        foreground: syntax.blue
+      }
+    },
+    {
+      name: 'CSS and sass pseudo elements',
+      scope: [
+        'entity.other.attribute-name.pseudo-element.css',
+        'entity.other.attribute-name.pseudo-class.css',
+        'entity.name.tag.reference.scss'
+      ],
+      settings: {
+        fontStyle: 'bold',
+        foreground: syntax.cyan
+      }
+    },
+    {
+      name: '',
+      scope: 'support.type.property-name',
+      settings: {
+        foreground: syntax.cyan
+      }
+    },
+    {
+      name: 'Css regex character',
+      scope: 'constant.character.escape.scss',
+      settings: {
+        foreground: syntax.emerald
+      }
+    },
+    {
+      name: 'CSS constants and entities',
+      scope: ['support.constant.property-value.css', 'entity.name.tag.css'],
+      settings: {
+        foreground: syntax.cyan
+      }
+    },
+    {
+      name: 'CSS Font',
+      scope: [
+        'support.constant.font-name',
+        'meta.attribute-selector.scss',
+        'meta.definition.variable'
+      ],
+      settings: {
+        foreground: syntax.green
+      }
+    },
+    {
       name: 'CSS classes',
       scope: ['entity.other.attribute-name.class.css', 'entity.other.attribute-name.parent-selector-suffix.css'],
       settings: {
         fontStyle: 'bold',
-        foreground: green.green_600
+        foreground: syntax.green
       }
     },
     {
@@ -119,7 +132,7 @@ const getCss = (colors: Palette) => {
       scope: 'variable.scss',
       settings: {
         fontStyle: 'bold',
-        foreground: amber.amber_600
+        foreground: syntax.amber
       }
     },
     {
@@ -133,14 +146,7 @@ const getCss = (colors: Palette) => {
       ],
       settings: {
         fontStyle: 'bold',
-        foreground: cyan.cyan_600
-      }
-    },
-    {
-      name: 'Css if and media',
-      scope: ['meta.at-rule.if.scss', 'support.constant.media.css'],
-      settings: {
-        foreground: gray.gray_300
+        foreground: syntax.cyan
       }
     },
     {
@@ -156,7 +162,7 @@ const getCss = (colors: Palette) => {
         'source.scss support.function'
       ],
       settings: {
-        foreground: purple.purple_400
+        foreground: syntax.purple
       }
     },
     {
@@ -169,17 +175,16 @@ const getCss = (colors: Palette) => {
         'meta.property-name.scss'
       ],
       settings: {
-        foreground: purple.purple_400
+        foreground: syntax.purple
       }
     },
     {
       name: 'Sass font-face',
       scope: ['meta.at-rule.fontface.scss', 'keyword.control.at-rule.fontface.scss'],
       settings: {
-        foreground: cyan.cyan_500
+        foreground: syntax.cyan
       }
     }
-
   ];
 };
 
