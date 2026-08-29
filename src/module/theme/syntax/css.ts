@@ -6,7 +6,9 @@ const getCss = (colors: Palette) => {
     gray,
     blue,
     amber,
-    emerald
+    emerald,
+    purple,
+    green
   } = colors;
 
   return [
@@ -62,7 +64,7 @@ const getCss = (colors: Palette) => {
       ],
       settings: {
         fontStyle: 'bold',
-        foreground: cyan.cyan_600
+        foreground: cyan.cyan_500
       }
     },
     {
@@ -76,7 +78,7 @@ const getCss = (colors: Palette) => {
       name: 'CSS constants and entities',
       scope: ['support.constant.property-value.css', 'entity.name.tag.css'],
       settings: {
-        foreground: cyan.cyan_600
+        foreground: cyan.cyan_500
       }
     },
     {
@@ -109,7 +111,7 @@ const getCss = (colors: Palette) => {
       scope: ['entity.other.attribute-name.class.css', 'entity.other.attribute-name.parent-selector-suffix.css'],
       settings: {
         fontStyle: 'bold',
-        foreground: emerald.emerald_600
+        foreground: green.green_600
       }
     },
     {
@@ -126,7 +128,8 @@ const getCss = (colors: Palette) => {
         'keyword.other.unit.rem.css',
         'keyword.other.unit.percentage.css',
         'keyword.other.unit.s.css',
-        'keyword.other.unit.vh.css'
+        'keyword.other.unit.vh.css',
+        'support.constant.font-name.css'
       ],
       settings: {
         fontStyle: 'bold',
@@ -139,7 +142,44 @@ const getCss = (colors: Palette) => {
       settings: {
         foreground: gray.gray_300
       }
+    },
+    {
+      name: 'CSS functions',
+      scope: [
+        'support.function.transform.css',
+        'support.function.transform.scss',
+        'support.function.calc.css',
+        'support.function.calc.scss',
+        'support.function.misc.css',
+        'support.function.misc.scss',
+        'source.css support.function',
+        'source.scss support.function'
+      ],
+      settings: {
+        foreground: purple.purple_400
+      }
+    },
+    {
+      name: 'Sass Include Forced via Property List',
+      scope: [
+        'meta.at-rule.include.scss meta.property-name.scss',
+        'meta.property-list.scss source.css.scss',
+        'meta.property-list.scss',
+        'meta.at-rule.include.scss',
+        'meta.property-name.scss'
+      ],
+      settings: {
+        foreground: purple.purple_400
+      }
+    },
+    {
+      name: 'Sass font-face',
+      scope: ['meta.at-rule.fontface.scss', 'keyword.control.at-rule.fontface.scss'],
+      settings: {
+        foreground: cyan.cyan_500
+      }
     }
+
   ];
 };
 
