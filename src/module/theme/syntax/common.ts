@@ -1,12 +1,15 @@
+import { alpha } from '@global/util/alpha';
+import { settings } from 'node:cluster';
+
 import type { Palette } from '@global/type/color_scheme_type';
 
 const getCommon = (colors: Palette) => {
   const {
     gray,
+    syntax,
     cyan,
     blue,
     amber,
-    indigo,
     emerald
   } = colors;
 
@@ -19,14 +22,14 @@ const getCommon = (colors: Palette) => {
         'punctuation.definition.comment'
       ],
       settings: {
-        foreground: gray.gray_600
+        foreground: gray.gray_500
       }
     },
     {
       name: 'String',
       scope: ['string', 'punctuation.section.embedded source'],
       settings: {
-        foreground: emerald.emerald_600
+        foreground: syntax.green
       }
     },
     {
@@ -37,7 +40,7 @@ const getCommon = (colors: Palette) => {
         'constant.character.escape'
       ],
       settings: {
-        foreground: emerald.emerald_200
+        foreground: syntax.emerald
       }
     },
     {
@@ -48,50 +51,23 @@ const getCommon = (colors: Palette) => {
         'constant.numeric'
       ],
       settings: {
-        foreground: cyan.cyan_600
+        foreground: syntax.cyan
       }
     },
     {
       name: 'Variable, number, Built-in constants, separators like ; or ,',
       scope: [
         'variable',
-        // 'variable.parameter',
-        // 'variable.parameter.function-call',
         'variable.other',
         'variable.language',
         'punctuation.separator',
         'punctuation.terminator',
         'punctuation.section',
-        'punctuation.accessor'
+        'punctuation.accessor',
+        'entity.name.function'
       ],
       settings: {
         foreground: gray.gray_300
-      }
-    },
-    {
-      name: 'Variable parameter',
-      scope: ['variable.parameter', 'variable.parameter.function-call'],
-      settings: {
-        foreground: amber.amber_600
-      }
-    },
-    {
-      name: 'Function name and arguments',
-      scope: 'entity.name.function',
-      settings: {
-        foreground: gray.gray_300
-      }
-    },
-    {
-      name: 'Function calls only',
-      scope: [
-        'meta.function-call entity.name.function',
-        'meta.function-call support.function',
-        'meta.function-call variable.other.readwrite',
-        'support.function.any-method'
-      ],
-      settings: {
-        foreground: indigo.indigo_400
       }
     },
     {
@@ -99,7 +75,7 @@ const getCommon = (colors: Palette) => {
       scope: 'entity.name.tag',
       settings: {
         fontStyle: 'bold',
-        foreground: blue.blue_600
+        foreground: syntax.blue
       }
     },
     {
@@ -107,39 +83,39 @@ const getCommon = (colors: Palette) => {
       scope: ['entity.name.type', 'entity.other.inherited-class'],
       settings: {
         fontStyle: 'bold',
-        foreground: cyan.cyan_600
+        foreground: syntax.cyan
       }
     },
     {
       name: 'Tag attribute',
       scope: 'entity.other.attribute-name',
       settings: {
-        foreground: amber.amber_600
+        foreground: syntax.amber
       }
     },
     {
-      name: 'Tag start/end',
-      scope: [
-        'punctuation.definition.tag.end',
-        'punctuation.definition.tag.begin',
-        'punctuation.definition.tag'
-      ],
-      settings: {
-        fontStyle: 'bold',
-        foreground: blue.blue_800
-      }
-    },
-    {
-      name: 'Storage, keyword',
+      name: 'Storage, keyword and tags',
       scope: [
         'storage',
         'storage.type',
         'keyword',
-        'keyword.operator'
+        'keyword.operator',
+        'punctuation.definition.tag'
       ],
       settings: {
         fontStyle: 'bold',
-        foreground: blue.blue_600
+        foreground: syntax.blue
+      }
+    },
+    {
+      name: 'Tag open and close',
+      scope: [
+        'meta.tag',
+        'punctuation.definition.tag.begin',
+        'punctuation.definition.tag.end'
+      ],
+      settings: {
+        foreground: alpha(syntax.blue, 0.6)
       }
     },
     {
@@ -150,7 +126,44 @@ const getCommon = (colors: Palette) => {
         'support.function'
       ],
       settings: {
-        foreground: cyan.cyan_600
+        foreground: syntax.cyan
+      }
+    },
+    {
+      name: 'Function parameters and their usage',
+      scope: ['variable.parameter'],
+      settings: {
+        foreground: syntax.amber
+      }
+    },
+    {
+      name: 'Function Calls',
+      scope: [
+        'meta.function-call entity.name.function',
+        'meta.function-call support.function',
+        'variable.function',
+        'support.function.go'
+      ],
+      settings: {
+        foreground: syntax.purple
+      }
+    },
+    {
+      name: 'Object properties and attributes globally',
+      scope: [
+        'variable.other.property',
+        'support.type.property-name',
+        'meta.property-name'
+      ],
+      settings: {
+        foreground: syntax.lightBlue
+      }
+    },
+    {
+      name: 'Object properties and attributes inside objects',
+      scope: 'meta.object-literal.key',
+      settings: {
+        foreground: gray.gray_400
       }
     }
   ];
