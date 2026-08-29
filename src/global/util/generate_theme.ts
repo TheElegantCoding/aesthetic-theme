@@ -9,7 +9,10 @@ const buildTheme = async () => {
   const theme = createTheme({
     colors: defaultPalette,
     type: 'dark',
-    name: 'Aesthetic Dark'
+    name: 'Aesthetic dark',
+    semanticClass: 'aesthetic-dark',
+    author: 'Luis M',
+    maintainers: ['Luis M <luismonsalve1941@gmail.com>']
   });
 
   await mkdir(dirname(outputPath), { recursive: true });
