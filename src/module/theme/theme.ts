@@ -14,15 +14,23 @@ const createTheme = ({ colors, type, name }: ThemeType) => {
     name,
     type,
     colors: getVscodeStyles(colors),
+    semanticHighlighting: true,
+    semanticTokenColors: {
+      // function: colors.syntax.purple,
+      // method: colors.syntax.purple,
+      parameter: colors.gray.gray_300,
+      variable: colors.gray.gray_300,
+      'function.declaration': { foreground: colors.gray.gray_300 }
+      // 'method.declaration': { foreground: colors.gray.gray_300 }
+    },
     tokenColors: [
-      ...getJsTs(colors),
       ...getCommon(colors),
+      ...getJsTs(colors),
       ...getCss(colors),
       ...getJson(colors),
       ...getMarkdown(colors),
       ...getHtmlSyntax(colors)
-    ],
-    semanticHighlighting: true
+    ]
   };
 };
 
