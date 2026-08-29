@@ -4,6 +4,9 @@ type ThemeType = {
   colors: Palette;
   type: 'dark' | 'light';
   name: string;
+  semanticClass?: string;
+  author?: string;
+  maintainers?: string[];
 };
 
 export type { ThemeType };
