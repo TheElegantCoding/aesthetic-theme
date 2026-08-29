@@ -128,7 +128,7 @@ const lime = {
   lime_300: '#BEF264',
   lime_400: '#A3E635',
   lime_500: '#84CC16',
-  lime_600: '#65A30D',
+  lime_600: '#5DABA1',
   lime_700: '#4D7C0F',
   lime_800: '#3F6212',
   lime_900: '#365314'
@@ -150,7 +150,7 @@ const green = {
 const emerald = {
   emerald_50: '#ECFDF5',
   emerald_100: '#D1FAE5',
-  emerald_200: '#A7F3D0',
+  emerald_200: '#62eaaa',
   emerald_300: '#6EE7B7',
   emerald_400: '#34D399',
   emerald_500: '#10B981',
@@ -199,6 +199,17 @@ const amber = {
   amber_900: '#78350F'
 };
 
+const syntax = {
+  green: '#0ea976',
+  cyan: '#09a7cf',
+  blue: '#1557e5',
+  lightBlue: '#6D90DA',
+  indigo: '#C7D2FE',
+  amber: '#f48507',
+  purple: '#bf88f3',
+  emerald: '#35e492'
+};
+
 const defaultPalette = {
   base,
   gray,
@@ -206,6 +217,7 @@ const defaultPalette = {
   cyan,
   blue,
   indigo,
+  syntax,
   sky,
   red,
   rose,
