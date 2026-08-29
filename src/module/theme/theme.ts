@@ -1,5 +1,6 @@
 import { getCommon } from '@module/theme/syntax/common';
 import { getCss } from '@module/theme/syntax/css';
+import { getHtmlSyntax } from '@module/theme/syntax/html';
 import { getJsTs } from '@module/theme/syntax/js_ts';
 import { getJson } from '@module/theme/syntax/json';
 import { getMarkdown } from '@module/theme/syntax/markdown';
@@ -18,8 +19,10 @@ const createTheme = ({ colors, type, name }: ThemeType) => {
       ...getCommon(colors),
       ...getCss(colors),
       ...getJson(colors),
-      ...getMarkdown(colors)
-    ]
+      ...getMarkdown(colors),
+      ...getHtmlSyntax(colors)
+    ],
+    semanticHighlighting: true
   };
 };
 
