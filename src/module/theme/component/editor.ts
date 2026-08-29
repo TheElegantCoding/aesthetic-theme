@@ -14,9 +14,13 @@ const getEditor = (colors: Palette) => {
     background
   } = colors;
 
+  const selectionBase = alpha(gray.gray_600, 0.4);
+  const subSelectionBase = alpha(gray.gray_500, 0.4);
+  const selectionBorder = base.transparent;
+
   return {
     'editor.background': background.background_950,
-    'editor.foreground': gray.gray_400,
+    'editor.foreground': gray.gray_300,
     'editorCursor.foreground': gray.gray_300,
     'editorCursor.background': gray.gray_950,
 
@@ -27,26 +31,27 @@ const getEditor = (colors: Palette) => {
     'editorWarning.foreground': yellow.yellow_500,
     'editorInfo.foreground': blue.blue_500,
 
-    'editor.selectionBackground': alpha(gray.gray_700, 0.4),
-    'editor.inactiveSelectionBackground': alpha(gray.gray_700, 0.4),
+    'editor.selectionBackground': selectionBase,
+    'editor.inactiveSelectionBackground': subSelectionBase,
     'editorWhitespace.foreground': gray.gray_800,
 
-    'editor.selectionHighlightBackground': alpha(gray.gray_700, 0.5),
-    'editor.selectionHighlightBorder': gray.gray_400,
+    'editor.selectionHighlightBackground': selectionBase,
+    'editor.selectionHighlightBorder': selectionBorder,
 
-    'editor.findMatchBackground': alpha(gray.gray_700, 0.5),
-    'editor.findMatchHighlightBackground': alpha(gray.gray_700, 0.5),
-    'editor.findMatchBorder': gray.gray_400,
-    'editor.findMatchHighlightBorder': gray.gray_400,
-    'editor.rangeHighlightBackground': alpha(gray.gray_700, 0.5),
+    'editor.findMatchBackground': selectionBase,
+    'editor.findMatchBorder': selectionBorder,
+    'editor.findMatchHighlightBackground': selectionBase,
+    'editor.findMatchHighlightBorder': selectionBorder,
+    'editor.rangeHighlightBackground': subSelectionBase,
+    'editor.rangeHighlightBorder': selectionBorder,
 
-    'editor.wordHighlightStrongBackground': alpha(gray.gray_700, 0.5),
-    'editor.wordHighlightBackground': alpha(gray.gray_700, 0.5),
-    'editor.wordHighlightBorder': gray.gray_400,
-    'editor.wordHighlightStrongBorder': gray.gray_400,
+    'editor.wordHighlightStrongBackground': selectionBase,
+    'editor.wordHighlightBackground': selectionBase,
+    'editor.wordHighlightBorder': selectionBorder,
+    'editor.wordHighlightStrongBorder': selectionBorder,
 
-    'editor.foldBackground': alpha(gray.gray_700, 0.35),
-    'editor.lineHighlightBackground': alpha(gray.gray_700, 0.2),
+    'editor.foldBackground': selectionBase,
+    'editor.lineHighlightBackground': alpha(gray.gray_600, 0.3),
     'editorBracketMatch.background': alpha(gray.gray_700, 0.35),
     'editorIndentGuide.background': gray.gray_800,
     'editorGutter.foldingControlForeground': gray.gray_300,
