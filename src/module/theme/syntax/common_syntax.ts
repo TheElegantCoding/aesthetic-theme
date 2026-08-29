@@ -4,24 +4,35 @@ const commonSyntax = (colors: Palette) => {
   const { gray, syntax } = colors;
 
   return [
-    // {
-    //   name: 'Comment',
-    //   scope: [
-    //     'comment',
-    //     'string.comment',
-    //     'punctuation.definition.comment'
-    //   ],
-    //   settings: {
-    //     foreground: gray.gray_500
-    //   }
-    // },
-    // {
-    //   name: 'String',
-    //   scope: ['string', 'punctuation.section.embedded source'],
-    //   settings: {
-    //     foreground: syntax.green
-    //   }
-    // },
+    {
+      name: 'String',
+      scope: ['string'],
+      settings: {
+        foreground: syntax.green
+      }
+    },
+    {
+      name: 'Comment',
+      scope: ['comment', 'punctuation.definition.comment'],
+      settings: {
+        foreground: gray.gray_500
+      }
+    },
+    {
+      name: 'Storage, keyword and tags',
+      scope: [
+        'storage',
+        'storage.type',
+        'keyword',
+        'keyword.operator',
+        'punctuation.definition.tag'
+      ],
+      settings: {
+        fontStyle: 'bold',
+        foreground: syntax.blue
+      }
+    }
+
     // {
     //   name: 'Regular Expressions and Escape Characters',
     //   scope: [
@@ -64,20 +75,6 @@ const commonSyntax = (colors: Palette) => {
     //   settings: {
     //     fontStyle: 'bold',
     //     foreground: syntax.cyan
-    //   }
-    // },
-    // {
-    //   name: 'Storage, keyword and tags',
-    //   scope: [
-    //     'storage',
-    //     'storage.type',
-    //     'keyword',
-    //     'keyword.operator',
-    //     'punctuation.definition.tag'
-    //   ],
-    //   settings: {
-    //     fontStyle: 'bold',
-    //     foreground: syntax.blue
     //   }
     // },
     // {
