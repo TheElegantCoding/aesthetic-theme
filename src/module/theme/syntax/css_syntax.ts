@@ -58,7 +58,9 @@ const cssSyntax = (colors: Palette) => {
       name: 'CSS Name variable',
       scope: [
         'variable.scss',
+        'variable.css',
         'variable.less',
+        'variable.argument.css',
         'support.other.variable.less',
         'punctuation.definition.variable.less',
         'variable.other.less'
@@ -368,9 +370,15 @@ const cssSyntax = (colors: Palette) => {
       }
     },
     {
-      name: 'CSS/LESS punctuation',
+      name: 'Css/sass/less punctuation',
       scope: [
         'punctuation.terminator.rule.scss',
+        'punctuation.separator.list.comma.css',
+        'punctuation.separator.delimiter.scss',
+        'punctuation.definition.begin.bracket.round.scss',
+        'punctuation.section.function.begin.bracket.round.css',
+        'punctuation.definition.end.bracket.round.scss',
+        'punctuation.section.function.end.bracket.round.css',
         'punctuation.separator.key-value.scss',
         'punctuation.section.function.scss',
         'punctuation.definition.group.begin.less',
