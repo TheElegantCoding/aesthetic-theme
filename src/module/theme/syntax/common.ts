@@ -3,14 +3,7 @@ import { alpha } from '@global/util/alpha';
 import type { Palette } from '@global/type/color_scheme_type';
 
 const getCommon = (colors: Palette) => {
-  const {
-    gray,
-    syntax,
-    cyan,
-    blue,
-    amber,
-    emerald
-  } = colors;
+  const { gray, syntax } = colors;
 
   return [
     {
@@ -54,17 +47,7 @@ const getCommon = (colors: Palette) => {
       }
     },
     {
-      name: 'Variable, number, Built-in constants, separators like ; or ,',
-      scope: [
-        'variable',
-        'variable.other',
-        'variable.language',
-        'punctuation.separator',
-        'punctuation.terminator',
-        'punctuation.section',
-        'punctuation.accessor',
-        'entity.name.function'
-      ],
+      scope: ['variable.parameter.ts', 'variable.other.property.ts'],
       settings: {
         foreground: gray.gray_300
       }
@@ -83,13 +66,6 @@ const getCommon = (colors: Palette) => {
       settings: {
         fontStyle: 'bold',
         foreground: syntax.cyan
-      }
-    },
-    {
-      name: 'Tag attribute',
-      scope: 'entity.other.attribute-name',
-      settings: {
-        foreground: syntax.amber
       }
     },
     {
@@ -127,44 +103,21 @@ const getCommon = (colors: Palette) => {
       settings: {
         foreground: syntax.cyan
       }
-    },
-    {
-      name: 'Function parameters and their usage',
-      scope: ['variable.parameter'],
-      settings: {
-        foreground: syntax.amber
-      }
-    },
-    {
-      name: 'Function Calls',
-      scope: [
-        'meta.function-call entity.name.function',
-        'meta.function-call support.function',
-        'variable.function',
-        'support.function.go'
-      ],
-      settings: {
-        foreground: syntax.purple
-      }
-    },
-    {
-      name: 'Object properties and attributes globally',
-      scope: [
-        'variable.other.property',
-        'support.type.property-name',
-        'meta.property-name'
-      ],
-      settings: {
-        foreground: syntax.lightBlue
-      }
-    },
-    {
-      name: 'Object properties and attributes inside objects',
-      scope: 'meta.object-literal.key',
-      settings: {
-        foreground: gray.gray_400
-      }
     }
+    // {
+    //   name: 'Function parameters and their usage',
+    //   scope: ['variable.parameter'],
+    //   settings: {
+    //     foreground: syntax.amber
+    //   }
+    // },
+    // {
+    //   name: 'Tag attribute',
+    //   scope: 'entity.other.attribute-name',
+    //   settings: {
+    //     foreground: syntax.amber
+    //   }
+    // }
   ];
 };
 
