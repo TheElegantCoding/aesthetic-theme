@@ -77,14 +77,18 @@ const getMarkdown = (colors: Palette) => {
     },
     {
       name: 'Markdown code',
-      scope: 'markup.fenced_code.block.markdown',
+      scope: ['markup.fenced_code.block.markdown', 'markup.inline.raw.markdown'],
       settings: {
         foreground: blue.blue_500
       }
     },
     {
-      name: 'Markdown code definition',
-      scope: ['fenced_code.block.language.markdown', 'punctuation.definition.raw.markdown'],
+      name: 'Markdown code definition and language',
+      scope: [
+        'fenced_code.block.language.markdown',
+        'punctuation.definition.raw.markdown',
+        'punctuation.definition.fenced.markdown'
+      ],
       settings: {
         fontStyle: 'bold',
         foreground: cyan.cyan_500
@@ -92,7 +96,11 @@ const getMarkdown = (colors: Palette) => {
     },
     {
       name: 'Markdown List',
-      scope: ['markup.list.unnumbered.markdown', 'markup.list.numbered.markdown'],
+      scope: [
+        'markup.list.unnumbered.markdown',
+        'markup.list.numbered.markdown',
+        'punctuation.definition.list_item.markdown'
+      ],
       settings: {
         fontStyle: 'bold',
         foreground: blue.blue_500
@@ -100,10 +108,24 @@ const getMarkdown = (colors: Palette) => {
     },
     {
       name: 'Markdown quote',
-      scope: 'markup.quote.markdown',
+      scope: ['markup.quote.markdown', 'punctuation.definition.quote.markdown'],
       settings: {
         fontStyle: 'italic',
         foreground: purple.purple_500
+      }
+    },
+    {
+      name: 'Markdown tables',
+      scope: ['meta.separator.markdown', 'punctuation.separator.table.markdown'],
+      settings: {
+        foreground: gray.gray_400
+      }
+    },
+    {
+      name: '',
+      scope: ['markup.fenced_code.block.markdown', 'text.html.markdown'],
+      settings: {
+        foreground: gray.gray_400
       }
     }
   ];
