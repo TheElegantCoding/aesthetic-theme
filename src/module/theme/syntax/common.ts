@@ -1,5 +1,4 @@
 import { alpha } from '@global/util/alpha';
-import { settings } from 'node:cluster';
 
 import type { Palette } from '@global/type/color_scheme_type';
 
