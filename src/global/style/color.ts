@@ -200,14 +200,14 @@ const amber = {
 };
 
 const syntax = {
-  green: '#18b451',
-  cyan: '#23cbf5',
+  green: '#009E60',
+  cyan: '#099ec3',
   blue: '#2d69ec',
   lightBlue: '#6D90DA',
   indigo: '#C7D2FE',
-  amber: '#f48507',
+  amber: '#df7a06',
   purple: '#bf88f3',
-  emerald: '#2bedad'
+  emerald: '#11cd8e'
 };
 
 const defaultPalette = {
