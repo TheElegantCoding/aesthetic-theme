@@ -203,6 +203,7 @@ const syntax = {
   green: '#009E60',
   cyan: '#099ec3',
   blue: '#2d69ec',
+  red: '#dc2626',
   lightBlue: '#6D90DA',
   indigo: '#C7D2FE',
   amber: '#df7a06',
