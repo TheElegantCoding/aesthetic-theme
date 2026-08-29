@@ -1,7 +1,7 @@
 import type { Palette } from '@global/type/color_scheme_type';
 
 const getJsTs = (colors: Palette) => {
-  const { gray, cyan } = colors;
+  const { gray, syntax } = colors;
 
   return [
     {
@@ -9,7 +9,7 @@ const getJsTs = (colors: Palette) => {
       scope: 'support.type.primitive.ts',
       settings: {
         fontStyle: 'bold',
-        foreground: cyan.cyan_600
+        foreground: syntax.cyan
       }
     },
     {
@@ -21,9 +21,21 @@ const getJsTs = (colors: Palette) => {
     },
     {
       name: 'Vite variable meta',
-      scope: 'support.variable.property.importmeta.tsx',
+      scope: 'support.variable.property.importmeta.ts',
       settings: {
-        foreground: gray.gray_300
+        foreground: syntax.cyan
+      }
+    },
+    {
+      name: 'New expression constructor',
+      scope: [
+        'keyword.operator.new + entity.name.type',
+        'keyword.operator.new + support.class',
+        'meta.new entity.name.type',
+        'meta.new support.class'
+      ],
+      settings: {
+        foreground: syntax.cyan
       }
     }
   ];
