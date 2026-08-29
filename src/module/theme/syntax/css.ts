@@ -105,7 +105,8 @@ const getCss = (colors: Palette) => {
       name: 'CSS constants and entities',
       scope: ['support.constant.property-value.css', 'entity.name.tag.css'],
       settings: {
-        foreground: syntax.cyan
+        fontStyle: 'normal',
+        foreground: syntax.blue
       }
     },
     {
@@ -183,6 +184,13 @@ const getCss = (colors: Palette) => {
       scope: ['meta.at-rule.fontface.scss', 'keyword.control.at-rule.fontface.scss'],
       settings: {
         foreground: syntax.cyan
+      }
+    },
+    {
+      name: 'Css unit',
+      scope: ['keyword.other.unit.percentage.css'],
+      settings: {
+        foreground: syntax.blue
       }
     }
   ];
