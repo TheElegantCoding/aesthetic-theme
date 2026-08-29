@@ -85,9 +85,16 @@ const markdownSyntax = (colors: Palette) => {
     },
     {
       name: 'Markdown Quote',
-      scope: 'markup.quote.markdown',
+      scope: ['markup.quote.markdown'],
       settings: {
         fontStyle: 'italic',
+        foreground: syntax.purple
+      }
+    },
+    {
+      name: 'Markdown Quote Punctuation',
+      scope: ['punctuation.definition.quote.begin.markdown'],
+      settings: {
         foreground: syntax.purple
       }
     },
@@ -128,19 +135,26 @@ const markdownSyntax = (colors: Palette) => {
       settings: {
         foreground: syntax.amber
       }
+    },
+    {
+      name: 'Markdown code punctuation',
+      scope: ['markup.fenced_code.block.markdown'],
+      settings: {
+        fontStyle: 'bold',
+        foreground: syntax.blue
+      }
+    },
+    {
+      name: 'Markdown code',
+      scope: ['fenced_code.block.language.markdown'],
+      settings: {
+        foreground: syntax.cyan
+      }
     }
-    // {
     //   name: 'Markdown reference constant',
     //   scope: 'constant.other.reference.link.markdown',
     //   settings: {
     //     foreground: syntax.cyan
-    //   }
-    // },
-    // {
-    //   name: 'Markdown code',
-    //   scope: ['markup.fenced_code.block.markdown', 'markup.inline.raw.markdown'],
-    //   settings: {
-    //     foreground: syntax.blue
     //   }
     // },
     // {
@@ -167,14 +181,7 @@ const markdownSyntax = (colors: Palette) => {
     //     foreground: syntax.blue
     //   }
     // },
-    // {
-    //   name: 'Markdown quote',
-    //   scope: ['markup.quote.markdown', 'punctuation.definition.quote.markdown'],
-    //   settings: {
-    //     fontStyle: 'italic',
-    //     foreground: syntax.purple
-    //   }
-    // },
+
   ];
 };
 
