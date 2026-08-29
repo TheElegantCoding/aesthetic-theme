@@ -37,6 +37,42 @@ const getJsTs = (colors: Palette) => {
       settings: {
         foreground: syntax.cyan
       }
+    },
+    {
+      name: 'Brace',
+      scope: 'meta.brace.square',
+      settings: {
+        foreground: gray.gray_300
+      }
+    },
+    {
+      scope: [
+        'variable.object.property.ts',
+        'meta.field.declaration.ts',
+        'meta.definition.property.ts'
+      ],
+      settings: {
+        foreground: gray.gray_300
+      }
+    },
+    {
+      name: 'Numeric number',
+      scope: 'constant.numeric.decimal',
+      settings: {
+        foreground: gray.gray_300
+      }
+    },
+    {
+      name: 'Object literal keys',
+      scope: [
+        'meta.object-literal.key',
+        'meta.object-literal.key.ts',
+        'meta.object.member',
+        'meta.object.member.ts'
+      ],
+      settings: {
+        foreground: gray.gray_400
+      }
     }
   ];
 };
