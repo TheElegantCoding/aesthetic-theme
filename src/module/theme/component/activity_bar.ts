@@ -13,7 +13,7 @@ const getActivityBar = (colors: Palette) => {
     'activityBar.background': background.background_950,
     'activityBar.dropBackground': background.background_950,
     'activityBar.inactiveForeground': gray.gray_600,
-    'activityBarBadge.background': blue.blue_700,
+    'activityBarBadge.background': blue.blue_600,
     'activityBarBadge.foreground': gray.gray_200,
     'activityBar.border': base.transparent
   };
