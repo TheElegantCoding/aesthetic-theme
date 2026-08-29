@@ -20,7 +20,7 @@ const getEditor = (colors: Palette) => {
 
   return {
     'editor.background': background.background_950,
-    'editor.foreground': gray.gray_300,
+    'editor.foreground': gray.gray_400,
     'editorCursor.foreground': gray.gray_300,
     'editorCursor.background': gray.gray_950,
 
