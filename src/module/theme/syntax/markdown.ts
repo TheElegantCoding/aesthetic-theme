@@ -1,15 +1,7 @@
 import type { Palette } from '@global/type/color_scheme_type';
 
 const getMarkdown = (colors: Palette) => {
-  const {
-    sky,
-    gray,
-    cyan,
-    blue,
-    purple,
-    yellow,
-    emerald
-  } = colors;
+  const { syntax, gray } = colors;
 
   return [
     {
@@ -24,7 +16,7 @@ const getMarkdown = (colors: Palette) => {
       scope: ['entity.name.section.markdown', 'punctuation.definition.heading.markdown'],
       settings: {
         fontStyle: 'bold',
-        foreground: cyan.cyan_500
+        foreground: syntax.cyan
       }
     },
     {
@@ -32,7 +24,7 @@ const getMarkdown = (colors: Palette) => {
       scope: 'markup.italic.markdown',
       settings: {
         fontStyle: 'italic',
-        foreground: sky.sky_500
+        foreground: syntax.cyan
       }
     },
     {
@@ -40,14 +32,14 @@ const getMarkdown = (colors: Palette) => {
       scope: 'markup.bold.markdown',
       settings: {
         fontStyle: 'bold',
-        foreground: blue.blue_500
+        foreground: syntax.blue
       }
     },
     {
       name: 'Markdown strikethrough',
       scope: 'markup.strikethrough.markdown',
       settings: {
-        foreground: yellow.yellow_600
+        foreground: syntax.amber
       }
     },
     {
@@ -58,28 +50,28 @@ const getMarkdown = (colors: Palette) => {
         'markup.inline.raw.string.markdown'
       ],
       settings: {
-        foreground: emerald.emerald_500
+        foreground: syntax.emerald
       }
     },
     {
       name: 'Markdown link',
       scope: ['markup.underline.link.markdown', 'markup.underline.link.image.markdown'],
       settings: {
-        foreground: blue.blue_500
+        foreground: syntax.blue
       }
     },
     {
       name: 'Markdown reference constant',
       scope: 'constant.other.reference.link.markdown',
       settings: {
-        foreground: cyan.cyan_500
+        foreground: syntax.cyan
       }
     },
     {
       name: 'Markdown code',
       scope: ['markup.fenced_code.block.markdown', 'markup.inline.raw.markdown'],
       settings: {
-        foreground: blue.blue_500
+        foreground: syntax.blue
       }
     },
     {
@@ -91,7 +83,7 @@ const getMarkdown = (colors: Palette) => {
       ],
       settings: {
         fontStyle: 'bold',
-        foreground: cyan.cyan_500
+        foreground: syntax.cyan
       }
     },
     {
@@ -103,7 +95,7 @@ const getMarkdown = (colors: Palette) => {
       ],
       settings: {
         fontStyle: 'bold',
-        foreground: blue.blue_500
+        foreground: syntax.blue
       }
     },
     {
@@ -111,7 +103,7 @@ const getMarkdown = (colors: Palette) => {
       scope: ['markup.quote.markdown', 'punctuation.definition.quote.markdown'],
       settings: {
         fontStyle: 'italic',
-        foreground: purple.purple_500
+        foreground: syntax.purple
       }
     },
     {
@@ -122,7 +114,7 @@ const getMarkdown = (colors: Palette) => {
       }
     },
     {
-      name: '',
+      name: 'Code block text',
       scope: ['markup.fenced_code.block.markdown', 'text.html.markdown'],
       settings: {
         foreground: gray.gray_400
