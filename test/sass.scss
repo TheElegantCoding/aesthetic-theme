@@ -1,0 +1,125 @@
+// ==========================================
+// SCSS ULTIMATE COMPREHENSIVE TEST FILE
+// ==========================================
+
+// 1. Variables & Maps
+$primary-color: #099ec3;
+$secondary-color: #2d69ec;
+$spacing: 16px;
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 1024px
+);
+
+// 2. Mixins
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+// 3. Functions
+@function calculate-rem($size) {
+  @return ($size / 16px) * 1rem;
+}
+
+// 4. Placeholder Selectors
+%base-card {
+  background-color: #1e1e1e;
+  border: 1px solid $primary-color;
+  border-radius: calculate-rem(8px);
+  padding: $spacing;
+}
+
+// 5. Main Styles with Nesting & Interpolation
+.dashboard-wrapper {
+  @include flex-center(column);
+  margin: 0 auto;
+  padding: $spacing * 2;
+  color: #d1d5db;
+
+  .card {
+    @extend %base-card;
+    width: 100%;
+    max-width: percentage(0.8);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    // Pseudo-classes & Pseudo-elements nested
+    &:hover {
+      background-color: lighten(#1e1e1e, 5%);
+      transform: translateY(-4px);
+
+      &::after {
+        content: " →";
+        color: $secondary-color;
+      }
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 10vw;
+      height: 2vh;
+    }
+
+    .title {
+      font-size: calculate-rem(24px);
+      font-weight: bold;
+      color: $primary-color;
+    }
+  }
+
+  // 6. Control Directives: @for, @each, @if
+  @for $i from 1 through 3 {
+    .col-#{$i} {
+      width: (100% / $i);
+    }
+  }
+
+  $themes: (dark: #121212, light: #ffffff);
+  @each $name, $color in $themes {
+    &.theme-#{$name} {
+      background-color: $color;
+    }
+  }
+
+  // 7. Responsive Mixin Usage
+  @include respond-to(md) {
+    padding: $spacing * 3;
+
+    .card {
+      max-width: percentage(0.5);
+    }
+  }
+}
+
+// 8. Attribute Selectors & Escaping
+[class^="btn-"] {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.styled-element {
+  opacity: 0.85;
+  width: calc(100vw - 40px);
+  transform: translate3d(10px, 20px, 0);
+  background: rgb(255, 0, 0);
+  border-color: #ff0000;
+  content: "\00A9";
+  font-family: 'Open\0020Sans', sans-serif;
+}
+
+// 9. Comments
+/* Standard SCSS Block Comment */
+// Single-line SCSS Comment
