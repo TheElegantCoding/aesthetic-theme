@@ -207,7 +207,7 @@ const syntax = {
   lightCyan: '#73daca',
   lightBlue: '#6D90DA',
   indigo: '#C7D2FE',
-  amber: '#df7a06',
+  amber: '#fa9f38',
   purple: '#bf88f3',
   emerald: '#11cd8e'
 };
