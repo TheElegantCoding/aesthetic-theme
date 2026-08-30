@@ -3,108 +3,57 @@ import type { Palette } from '@global/type/color_scheme_type';
 const jsTsSyntax = (colors: Palette) => {
   const { gray, syntax } = colors;
 
-  return [{
-    name: 'js/ts new and instanceof keywords',
-    scope: [
-      'keyword.operator.new',
-      'keyword.operator.expression.instanceof',
-      'keyword.operator.expression.keyof',
-      'keyword.operator.delete'
-    ],
-    settings: {
-      fontStyle: 'bold',
-      foreground: syntax.blue
+  return [
+    {
+      name: 'js/ts new and instanceof keywords',
+      scope: [
+        'keyword.operator.new',
+        'keyword.operator.expression.instanceof',
+        'keyword.operator.expression.keyof',
+        'keyword.operator.delete'
+      ],
+      settings: {
+        fontStyle: 'bold',
+        foreground: syntax.blue
+      }
+    },
+    {
+      name: 'Vite variable meta',
+      scope: 'support.variable.property.importmeta.ts',
+      settings: {
+        fontStyle: 'bold',
+        foreground: syntax.lightBlue
+      }
+    },
+    {
+      name: 'Object literal keys',
+      scope: ['meta.object-literal.key', 'meta.object-literal.key.ts'],
+      settings: {
+        foreground: gray.gray_400
+      }
+    },
+    {
+      name: 'Property other',
+      scope: ['variable.other.property'],
+      settings: {
+        foreground: syntax.lightBlue
+      }
+    },
+    {
+      name: 'Export function',
+      scope: ['variable.other.readwrite.alias.ts'],
+      settings: {
+        foreground: gray.gray_300
+      }
+    },
+    {
+      name: 'Typeof and operator type annotation',
+      scope: ['keyword.operator.expression.typeof', 'keyword.operator.type.annotation.ts'],
+      settings: {
+        fontStyle: 'bold',
+        foreground: syntax.cyan
+      }
     }
-  }, {
-    scope: ['meta.object-literal.key.ts'],
-    settings: {
-      foreground: syntax.lightBlue
-    }
-  }
-    // {
-    //   name: 'js/ts punctuation separator key-value',
-    //   scope: 'punctuation.separator.key-value',
-    //   settings: {
-    //     foreground: gray.gray_300
-    //   }
-    // },
-    // {
-    //   name: 'js/ts import keyword',
-    //   scope: ['keyword.control.import.ts', 'keyword.control.from.ts'],
-    //   settings: {
-    //     foreground: syntax.blue
-    //   }
-    // }
-    // {
-    //   name: 'TS types',
-    //   scope: 'support.type.primitive.ts',
-    //   settings: {
-    //     fontStyle: 'bold',
-    //     foreground: syntax.cyan
-    //   }
-    // },
-    // {
-    //   name: 'Template string',
-    //   scope: 'meta.template.expression.ts',
-    //   settings: {
-    //     foreground: gray.gray_300
-    //   }
-    // },
-    // {
-    //   name: 'Vite variable meta',
-    //   scope: 'support.variable.property.importmeta.ts',
-    //   settings: {
-    //     foreground: syntax.cyan
-    //   }
-    // },
-    // {
-    //   name: 'New expression constructor',
-    //   scope: [
-    //     'keyword.operator.new + entity.name.type',
-    //     'keyword.operator.new + support.class',
-    //     'meta.new entity.name.type',
-    //     'meta.new support.class'
-    //   ],
-    //   settings: {
-    //     foreground: syntax.cyan
-    //   }
-    // },
-    // {
-    //   name: 'Brace',
-    //   scope: 'meta.brace.square',
-    //   settings: {
-    //     foreground: gray.gray_300
-    //   }
-    // },
-    // {
-    //   scope: [
-    //     'variable.object.property.ts',
-    //     'meta.field.declaration.ts',
-    //     'meta.definition.property.ts'
-    //   ],
-    //   settings: {
-    //     foreground: gray.gray_300
-    //   }
-    // },
-    // {
-    //   name: 'Numeric number',
-    //   scope: 'constant.numeric.decimal',
-    //   settings: {
-    //     foreground: gray.gray_300
-    //   }
-    // },
-    // {
-    //   name: 'Object literal keys',
-    //   scope: [
-    //     'meta.object-literal.key',
-    //     'meta.object-literal.key.ts',
-    //     'meta.object.member',
-    //     'meta.object.member.ts'
-    //   ],
-    //   settings: {
-    //     foreground: gray.gray_400
-    //   }
-    // }
   ];
 };
 
