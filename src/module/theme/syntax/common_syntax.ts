@@ -33,7 +33,6 @@ const commonSyntax = (colors: Palette) => {
       name: 'Numeric, Boolean, Undefined, Null',
       scope: [
         'variable.other.constant',
-        'punctuation.definition.constant',
         'constant.language',
         'constant.numeric',
         'support.constant',
@@ -80,9 +79,7 @@ const commonSyntax = (colors: Palette) => {
         'punctuation.definition.constant.markdown',
         'text.html.vue-html meta.tag',
         'meta.attribute.directive',
-        'punctuation.definition.keyword',
         'punctuation.terminator.rule',
-        'punctuation.definition.entity',
         'punctuation.separator.inheritance.php',
         'keyword.other.template',
         'keyword.other.substitution',
@@ -106,6 +103,7 @@ const commonSyntax = (colors: Palette) => {
         'keyword.operator.ternary',
         'keyword.operator.comparison',
         'keyword.operator.relational',
+        'keyword.control.at-rule',
         'keyword.operator.or.regexp'
       ],
       settings: {
