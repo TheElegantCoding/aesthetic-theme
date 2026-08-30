@@ -8,6 +8,7 @@ import { jsTsSyntax } from '@module/theme/syntax/js_ts_syntax';
 import { jsonSyntax } from '@module/theme/syntax/json_syntax';
 import { markdownSyntax } from '@module/theme/syntax/markdown_syntax';
 import { rustSyntax } from '@module/theme/syntax/rust_syntax';
+import { sqlSyntax } from '@module/theme/syntax/sql_syntax';
 import { ymlSyntax } from '@module/theme/syntax/yml_syntax';
 
 import { getVscodeStyles } from './component/vscode_styles';
@@ -31,11 +32,12 @@ const createTheme = ({
     colors: getVscodeStyles(colors),
     semanticHighlighting: true,
     semanticTokenColors: {
-      method: colors.syntax.purple,
+      parameter: colors.gray.gray_300,
       'parameter.declaration': colors.syntax.amber,
-      property: colors.syntax.lightBlue,
-      'property.declaration': colors.gray.gray_300,
-      'variable.defaultLibrary': { foreground: colors.syntax.cyan, fontStyle: 'bold' }
+      'property.declaration': colors.syntax.lightBlue,
+      'variable.defaultLibrary': { foreground: colors.syntax.cyan, fontStyle: 'bold' },
+      'property.defaultLibrary': { foreground: colors.syntax.cyan, fontStyle: 'bold' },
+      variable: colors.gray.gray_300
     },
     tokenColors: [
       ...commonSyntax(colors),
@@ -48,7 +50,8 @@ const createTheme = ({
       ...rustSyntax(colors),
       ...ymlSyntax(colors),
       ...apacheSyntax(colors),
-      ...graphqlSyntax(colors)
+      ...graphqlSyntax(colors),
+      ...sqlSyntax(colors)
     ]
   };
 };
