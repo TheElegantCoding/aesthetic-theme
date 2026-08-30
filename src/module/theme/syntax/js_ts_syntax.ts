@@ -3,23 +3,38 @@ import type { Palette } from '@global/type/color_scheme_type';
 const jsTsSyntax = (colors: Palette) => {
   const { gray, syntax } = colors;
 
-  return [
-    {
-      name: 'js/ts punctuation separator key-value',
-      scope: 'punctuation.separator.key-value',
-      settings: {
-        foreground: gray.gray_300
-      }
-    },
-    {
-      name: 'js/ts import keyword',
-      scope: ['keyword.control.import.ts', 'keyword.control.from.ts'],
-      settings: {
-        foreground: syntax.blue
-      }
-    },
-    {}
-
+  return [{
+    name: 'js/ts new and instanceof keywords',
+    scope: [
+      'keyword.operator.new',
+      'keyword.operator.expression.instanceof',
+      'keyword.operator.expression.keyof',
+      'keyword.operator.delete'
+    ],
+    settings: {
+      fontStyle: 'bold',
+      foreground: syntax.blue
+    }
+  }, {
+    scope: ['meta.object-literal.key.ts'],
+    settings: {
+      foreground: syntax.lightBlue
+    }
+  }
+    // {
+    //   name: 'js/ts punctuation separator key-value',
+    //   scope: 'punctuation.separator.key-value',
+    //   settings: {
+    //     foreground: gray.gray_300
+    //   }
+    // },
+    // {
+    //   name: 'js/ts import keyword',
+    //   scope: ['keyword.control.import.ts', 'keyword.control.from.ts'],
+    //   settings: {
+    //     foreground: syntax.blue
+    //   }
+    // }
     // {
     //   name: 'TS types',
     //   scope: 'support.type.primitive.ts',
