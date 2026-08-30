@@ -6,16 +6,40 @@ const commonSyntax = (colors: Palette) => {
   return [
     {
       name: 'String',
-      scope: ['string'],
+      scope: [
+        'string',
+        'constant.other.symbol',
+        'constant.other.key',
+        'meta.attribute-selector',
+        'string constant.character'
+      ],
       settings: {
         foreground: syntax.green
       }
     },
     {
       name: 'Comment',
-      scope: ['comment', 'punctuation.definition.comment'],
+      scope: [
+        'comment',
+        'punctuation.definition.comment',
+        'comment.block.documentation',
+        'comment.block.documentation punctuation'
+      ],
       settings: {
         foreground: gray.gray_500
+      }
+    },
+    {
+      name: 'Numeric, Boolean, Undefined, Null',
+      scope: [
+        'punctuation.definition.constant',
+        'constant.language',
+        'constant.numeric',
+        'support.constant',
+        'constant.other.caps'
+      ],
+      settings: {
+        foreground: syntax.cyan
       }
     },
     {
@@ -25,7 +49,8 @@ const commonSyntax = (colors: Palette) => {
         'storage.type',
         'keyword',
         'keyword.operator',
-        'punctuation.definition.tag'
+        'punctuation.definition.tag',
+        'punctuation.assignment'
       ],
       settings: {
         fontStyle: 'bold',
@@ -50,127 +75,102 @@ const commonSyntax = (colors: Palette) => {
       }
     },
     {
-      name: 'Number, Boolean, Undefined, Null',
+      name: 'Import, Export, From, Default',
       scope: [
-        'variable.other.constant',
-        'punctuation.definition.constant',
-        'constant.language',
-        'constant.numeric',
-        'support.constant',
-        'constant.other.caps'
+        'keyword.control.module.js',
+        'keyword.control.import',
+        'keyword.control.export',
+        'keyword.control.from',
+        'keyword.control.default',
+        'meta.import keyword.other'
       ],
       settings: {
+        foreground: syntax.blue
+      }
+    },
+    {
+      name: 'Regular Expressions and Escape Characters',
+      scope: ['string.regexp'],
+      settings: {
+        foreground: syntax.emerald
+      }
+    },
+    {
+      name: 'Type, Class, Interface, Enum, EnumMember, TypeParameter',
+      scope: [
+        'entity.name.type',
+        'entity.name.class',
+        'entity.name.interface',
+        'entity.name.enum',
+        'entity.name.enum-member',
+        'entity.name.type.parameter'
+      ],
+      settings: {
+        fontStyle: 'bold',
         foreground: syntax.cyan
       }
     },
     {
-      name: 'Function Definition',
+      name: 'Type primitive, Type built-in, Type literal, Type alias',
       scope: [
-        'entity.name.function',
-        'variable.other.enummember',
-        'meta.function-call',
-        'meta.function-call entity.name.function',
-        'variable.function',
-        'meta.definition.method entity.name.function',
-        'meta.object-literal entity.name.function'
+        'support.type',
+        'support.type.primitive',
+        'support.type.builtin',
+        'support.type.literal',
+        'support.function.construct',
+        'support.class',
+        'support.type.enum',
+        'support.type.alias'
       ],
+      settings: {
+        fontStyle: 'bold',
+        foreground: syntax.cyan
+      }
+    },
+    {
+      name: 'Function call',
+      scope: ['meta.function-call', 'punctuation.section.embedded'],
       settings: {
         foreground: syntax.purple
       }
     },
     {
-      name: 'Function Argument',
-      scope: [
-        'variable.parameter.function.language.special',
-        'variable.parameter',
-        'meta.function.parameters punctuation.definition.variable',
-        'meta.function.parameter variable'
-      ],
+      name: 'Variable others',
+      scope: ['variable.other.object'],
       settings: {
-        foreground: syntax.amber
+        foreground: gray.gray_300
       }
     },
-    {}
-    // {
-    //   name: 'Regular Expressions and Escape Characters',
-    //   scope: [
-    //     'string.regexp',
-    //     'source.regexp',
-    //     'constant.character.escape'
-    //   ],
-    //   settings: {
-    //     foreground: syntax.emerald
-    //   }
-    // },
-    // {
-    //   name: 'Constant color',
-    //   scope: [
-    //     'constant',
-    //     'constant.language',
-    //     'constant.numeric'
-    //   ],
-    //   settings: {
-    //     foreground: syntax.cyan
-    //   }
-    // },
-    // {
-    //   scope: ['variable.parameter.ts', 'variable.other.property.ts'],
-    //   settings: {
-    //     foreground: gray.gray_300
-    //   }
-    // },
-    // {
-    //   name: 'Tag',
-    //   scope: 'entity.name.tag',
-    //   settings: {
-    //     fontStyle: 'bold',
-    //     foreground: syntax.blue
-    //   }
-    // },
-    // {
-    //   name: 'Type',
-    //   scope: ['entity.name.type', 'entity.other.inherited-class'],
-    //   settings: {
-    //     fontStyle: 'bold',
-    //     foreground: syntax.cyan
-    //   }
-    // },
-    // {
-    //   name: 'Tag open and close',
-    //   scope: [
-    //     'meta.tag',
-    //     'punctuation.definition.tag.begin',
-    //     'punctuation.definition.tag.end'
-    //   ],
-    //   settings: {
-    //     foreground: alpha(syntax.blue, 0.6)
-    //   }
-    // },
-    // {
-    //   name: 'Library class/type',
-    //   scope: [
-    //     'support.type',
-    //     'support.class',
-    //     'support.function'
-    //   ],
-    //   settings: {
-    //     foreground: syntax.cyan
-    //   }
-    // }
-    // {
-    //   name: 'Function parameters and their usage',
-    //   scope: ['variable.parameter'],
-    //   settings: {
-    //     foreground: syntax.amber
-    //   }
-    // },
-    // {
-    //   name: 'Tag attribute',
-    //   scope: 'entity.other.attribute-name',
-    //   settings: {
-    //     foreground: syntax.amber
-    //   }
-    // }
+    {
+      name: 'Punctuation',
+      scope: [
+        'punctuation.accessor',
+        'punctuation.operation',
+        'punctuation.separator',
+        'meta.brace.round',
+        'meta.brace.square',
+        'punctuation.colon',
+        'punctuation.definition.section',
+        'punctuation.section',
+        'punctuation.definition.template-expression',
+        'punctuation.definition.arguments',
+        'punctuation.definition.parameters'
+      ],
+      settings: {
+        foreground: gray.gray_300
+      }
+    },
+    {
+      name: 'Constant color',
+      scope: [
+        'constant',
+        'constant.language',
+        'constant.numeric'
+      ],
+      settings: {
+        foreground: syntax.cyan
+      }
+    }
   ];
 };
 
