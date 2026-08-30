@@ -6,7 +6,7 @@ const cssSyntax = (colors: Palette) => {
   return [
     {
       name: 'Css html selector',
-      scope: ['entity.name.tag'],
+      scope: ['entity.name.tag.css'],
       settings: {
         fontStyle: 'bold',
         foreground: syntax.cyan
@@ -68,7 +68,11 @@ const cssSyntax = (colors: Palette) => {
     },
     {
       name: 'Css keyword operator bold',
-      scope: ['keyword.operator'],
+      scope: [
+        'keyword.operator.css',
+        'keyword.operator.less',
+        'keyword.operator.scss'
+      ],
       settings: {
         fontStyle: 'bold',
         foreground: syntax.cyan
@@ -94,7 +98,9 @@ const cssSyntax = (colors: Palette) => {
         'entity.other.attribute-name.pseudo-element',
         'entity.other.attribute-name.parent',
         'entity.other.attribute-name.pseudo-class',
-        'entity.name.tag.reference'
+        'entity.name.tag.reference.css',
+        'entity.name.tag.reference.scss',
+        'entity.name.tag.reference.less'
       ],
       settings: {
         fontStyle: 'bold',
@@ -142,14 +148,6 @@ const cssSyntax = (colors: Palette) => {
     {
       name: 'Css control statements & at-rules',
       scope: ['keyword.control'],
-      settings: {
-        fontStyle: 'bold',
-        foreground: syntax.blue
-      }
-    },
-    {
-      name: 'Operators',
-      scope: ['keyword.operator'],
       settings: {
         fontStyle: 'bold',
         foreground: syntax.blue
@@ -217,7 +215,11 @@ const cssSyntax = (colors: Palette) => {
     },
     {
       name: 'Css numbers',
-      scope: ['constant.numeric'],
+      scope: [
+        'constant.numeric.css',
+        'constant.numeric.scss',
+        'constant.numeric.less'
+      ],
       settings: {
         foreground: gray.gray_300
       }
