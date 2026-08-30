@@ -31,8 +31,66 @@ const commonSyntax = (colors: Palette) => {
         fontStyle: 'bold',
         foreground: syntax.blue
       }
-    }
-
+    },
+    {
+      name: 'Keyword Operator Logical, Arrow, Ternary, Comparison',
+      scope: [
+        'keyword.operator.logical',
+        'storage.type.function',
+        'keyword.operator.bitwise',
+        'keyword.operator.ternary',
+        'keyword.operator.comparison',
+        'keyword.operator.relational',
+        'keyword.operator.or.regexp',
+        'keyword.operator.optional'
+      ],
+      settings: {
+        fontStyle: 'bold',
+        foreground: syntax.blue
+      }
+    },
+    {
+      name: 'Number, Boolean, Undefined, Null',
+      scope: [
+        'variable.other.constant',
+        'punctuation.definition.constant',
+        'constant.language',
+        'constant.numeric',
+        'support.constant',
+        'constant.other.caps'
+      ],
+      settings: {
+        foreground: syntax.cyan
+      }
+    },
+    {
+      name: 'Function Definition',
+      scope: [
+        'entity.name.function',
+        'variable.other.enummember',
+        'meta.function-call',
+        'meta.function-call entity.name.function',
+        'variable.function',
+        'meta.definition.method entity.name.function',
+        'meta.object-literal entity.name.function'
+      ],
+      settings: {
+        foreground: syntax.purple
+      }
+    },
+    {
+      name: 'Function Argument',
+      scope: [
+        'variable.parameter.function.language.special',
+        'variable.parameter',
+        'meta.function.parameters punctuation.definition.variable',
+        'meta.function.parameter variable'
+      ],
+      settings: {
+        foreground: syntax.amber
+      }
+    },
+    {}
     // {
     //   name: 'Regular Expressions and Escape Characters',
     //   scope: [
