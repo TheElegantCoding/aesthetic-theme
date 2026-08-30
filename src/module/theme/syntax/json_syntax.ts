@@ -5,7 +5,7 @@ const jsonSyntax = (colors: Palette) => {
 
   return [
     {
-      name: 'json boolean, null, number, string',
+      name: ' boolean, null, number, string',
       scope: 'constant.language.json',
       settings: {
         foreground: syntax.cyan
