@@ -29,7 +29,11 @@ const cssSyntax = (colors: Palette) => {
     },
     {
       name: 'Css class',
-      scope: ['entity.other.attribute-name.class', 'string.unquoted.less'],
+      scope: [
+        'entity.other.attribute-name.class',
+        'string.unquoted.less',
+        'entity.other.attribute-name.class.css'
+      ],
       settings: {
         fontStyle: 'bold',
         foreground: syntax.green
