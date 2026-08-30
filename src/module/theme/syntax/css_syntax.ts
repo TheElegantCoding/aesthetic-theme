@@ -38,7 +38,9 @@ const cssSyntax = (colors: Palette) => {
     {
       name: 'CSS Name variable',
       scope: [
-        'variable',
+        'variable.scss',
+        'variable.css',
+        'variable.less',
         'variable.argument.css',
         'support.other.variable.less',
         'punctuation.definition.variable.less',
@@ -120,7 +122,12 @@ const cssSyntax = (colors: Palette) => {
     },
     {
       name: 'Css parameter',
-      scope: ['variable.parameter', 'variable.parameter.url'],
+      scope: [
+        'variable.parameter.css',
+        'variable.parameter.scss',
+        'variable.parameter.url.css',
+        'variable.parameter.url.scss'
+      ],
       settings: {
         foreground: syntax.cyan
       }
