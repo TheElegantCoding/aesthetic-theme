@@ -48,6 +48,13 @@ const htmlSyntax = (colors: Palette) => {
       settings: {
         foreground: gray.gray_500
       }
+    },
+    {
+      name: 'HTML components',
+      scope: 'support.class.component',
+      settings: {
+        foreground: syntax.cyan
+      }
     }
   ];
 };
