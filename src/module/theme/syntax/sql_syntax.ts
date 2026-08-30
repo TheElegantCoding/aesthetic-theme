@@ -1,9 +1,15 @@
 import type { Palette } from '@global/type/color_scheme_type';
 
 const sqlSyntax = (colors: Palette) => {
-  const {} = colors;
+  const { syntax } = colors;
 
-  return [{}];
+  return [{
+    name: 'Keyword SQL',
+    scope: 'keyword.other.DML',
+    settings: {
+      foreground: syntax.cyan
+    }
+  }];
 };
 
 export { sqlSyntax };
