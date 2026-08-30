@@ -4,6 +4,7 @@ type Palette = {
   syntax: {
     blue: string;
     cyan: string;
+    lightCyan: string;
     green: string;
     purple: string;
     emerald: string;
