@@ -20,19 +20,6 @@ $breakpoints: (
   justify-content: center;
 }
 
-@mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
-      @content;
-    }
-  }
-}
-
-// 3. Functions
-@function calculate-rem($size) {
-  @return ($size / 16px) * 1rem;
-}
-
 // 4. Placeholder Selectors
 %base-card {
   background-color: #1e1e1e;
@@ -77,29 +64,6 @@ $breakpoints: (
       font-size: calculate-rem(24px);
       font-weight: bold;
       color: $primary-color;
-    }
-  }
-
-  // 6. Control Directives: @for, @each, @if
-  @for $i from 1 through 3 {
-    .col-#{$i} {
-      width: (100% / $i);
-    }
-  }
-
-  $themes: (dark: #121212, light: #ffffff);
-  @each $name, $color in $themes {
-    &.theme-#{$name} {
-      background-color: $color;
-    }
-  }
-
-  // 7. Responsive Mixin Usage
-  @include respond-to(md) {
-    padding: $spacing * 3;
-
-    .card {
-      max-width: percentage(0.5);
     }
   }
 }
