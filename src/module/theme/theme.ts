@@ -1,10 +1,14 @@
+import { apacheSyntax } from '@module/theme/syntax/apache_syntax';
 import { commonSyntax } from '@module/theme/syntax/common_syntax';
 import { cssSyntax } from '@module/theme/syntax/css_syntax';
-import { haskellSyntax } from '@module/theme/syntax/haskel_syntax';
+import { envSyntax } from '@module/theme/syntax/env_syntax';
+import { graphqlSyntax } from '@module/theme/syntax/graphql_syntax';
 import { htmlSyntax } from '@module/theme/syntax/html_syntax';
 import { jsTsSyntax } from '@module/theme/syntax/js_ts_syntax';
 import { jsonSyntax } from '@module/theme/syntax/json_syntax';
 import { markdownSyntax } from '@module/theme/syntax/markdown_syntax';
+import { rustSyntax } from '@module/theme/syntax/rust_syntax';
+import { ymlSyntax } from '@module/theme/syntax/yml_syntax';
 
 import { getVscodeStyles } from './component/vscode_styles';
 
@@ -27,13 +31,11 @@ const createTheme = ({
     colors: getVscodeStyles(colors),
     semanticHighlighting: true,
     semanticTokenColors: {
-      // 'variable.constant': colors.syntax.cyan
-      // function: colors.syntax.purple,
-      // method: colors.syntax.purple,
-      // parameter: colors.gray.gray_300,
-      // variable: colors.gray.gray_300,
-      'function.declaration': { foreground: colors.gray.gray_300 }
-      // 'method.declaration': { foreground: colors.gray.gray_300 }
+      method: colors.syntax.purple,
+      'parameter.declaration': colors.syntax.amber,
+      property: colors.syntax.lightBlue,
+      'property.declaration': colors.gray.gray_300,
+      'variable.defaultLibrary': { foreground: colors.syntax.cyan, fontStyle: 'bold' }
     },
     tokenColors: [
       ...commonSyntax(colors),
@@ -42,7 +44,11 @@ const createTheme = ({
       ...cssSyntax(colors),
       ...jsonSyntax(colors),
       ...jsTsSyntax(colors),
-      ...haskellSyntax(colors)
+      ...envSyntax(colors),
+      ...rustSyntax(colors),
+      ...ymlSyntax(colors),
+      ...apacheSyntax(colors),
+      ...graphqlSyntax(colors)
     ]
   };
 };
