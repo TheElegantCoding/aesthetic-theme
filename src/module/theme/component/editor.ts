@@ -14,8 +14,8 @@ const getEditor = (colors: Palette) => {
     background
   } = colors;
 
-  const selectionBase = alpha(gray.gray_600, 0.4);
-  const subSelectionBase = alpha(gray.gray_500, 0.4);
+  const selectionBase = alpha(gray.gray_600, 0.55);
+  const subSelectionBase = alpha(gray.gray_500, 0.55);
   const selectionBorder = base.transparent;
 
   return {
