@@ -21,9 +21,13 @@
   },
   "contributes": {
     "themes": [{
-      "label": "Aesthetic's Theme",
+      "label": "Aesthetic theme dark grey",
       "uiTheme": "vs-dark",
-      "path": "./dist/aesthetic_dark_theme.json"
+      "path": "./dist/aesthetic-dark-grey.json"
+    }, {
+      "label": "Aesthetic theme",
+      "uiTheme": "vs-dark",
+      "path": "./dist/aesthetic-dark.json"
     }]
   },
   "scripts": {
