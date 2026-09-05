@@ -30,7 +30,6 @@ $breakpoints: (
 
 // 5. Main Styles with Nesting & Interpolation
 .dashboard-wrapper {
-  @include flex-center(column);
   margin: 0 auto;
   padding: $spacing * 2;
   color: #d1d5db;

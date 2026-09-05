@@ -1,127 +1,127 @@
 <!DOCTYPE html>
 <html lang="es" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Archivo de prueba completo para HTML, CSS y JavaScript en VS Code.">
-    <title>Test HTML Full Suite</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Archivo de prueba completo para HTML, CSS y JavaScript en VS Code.">
+  <title>Test HTML Full Suite</title>
 
-    <!-- Enlaces y Estilos -->
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        :root {
-            --primary-color: #099ec3;
-            --bg-dark: #1e1e1e;
-        }
-        body {
-            background-color: var(--bg-dark);
-            color: #d1d5db;
-            font-family: system-ui, -apple-system, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        .highlight-box {
-            border: 2px dashed var(--primary-color);
-            padding: 1rem;
-            margin-bottom: 15px;
-        }
-    </style>
+  <!-- Enlaces y Estilos -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --primary-color: #099ec3;
+      --bg-dark: #1e1e1e;
+    }
+    body {
+      background-color: var(--bg-dark);
+      color: #d1d5db;
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .highlight-box {
+      border: 2px dashed var(--primary-color);
+      padding: 1rem;
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
 <body id="top-document" data-theme="dark" class="page-container">
 
-    <!-- 1. Encabezados y Texto -->
-    <header class="site-header">
-        <h1>Título Principal H1</h1>
-        <h2>Subtítulo H2</h2>
-        <p>Este es un párrafo con texto plano, <strong>texto en negrita</strong>, <em>texto en cursiva</em> y una <a href="https://example.com" target="_blank" rel="noopener">etiqueta ancla (link)</a>.</p>
-    </header>
+  <!-- 1. Encabezados y Texto -->
+  <header class="site-header">
+    <h1>Título Principal H1</h1>
+    <h2>Subtítulo H2</h2>
+    <p>Este es un párrafo con texto plano, <strong>texto en negrita</strong>, <em>texto en cursiva</em> y una <a href="https://example.com" target="_blank" rel="noopener">etiqueta ancla (link)</a>.</p>
+  </header>
 
-    <main id="main-content">
-        <!-- 2. Formularios e Inputs -->
-        <section class="form-section">
-            <h3>Formulario de Prueba</h3>
-            <form action="/submit" method="POST" autocomplete="off">
+  <main id="main-content">
+    <!-- 2. Formularios e Inputs -->
+    <section class="form-section">
+      <h3>Formulario de Prueba</h3>
+      <form action="/submit" method="POST" autocomplete="off">
 
-                <div class="field-group">
-                    <label for="username">Usuario:</label>
-                    <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required value="DevUser">
-                </div>
+        <div class="field-group">
+          <label for="username">Usuario:</label>
+          <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required value="DevUser">
+        </div>
 
-                <div class="field-group">
-                    <label for="password">Contraseña:</label>
-                    <input type="password" id="password" name="password" disabled>
-                </div>
+        <div class="field-group">
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password" disabled>
+        </div>
 
-                <div class="field-group">
-                    <label for="role">Rol:</label>
-                    <select id="role" name="role">
-                        <option value="admin">Administrador</option>
-                        <option value="editor" selected>Editor</option>
-                        <option value="viewer">Espectador</option>
-                    </select>
-                </div>
+        <div class="field-group">
+          <label for="role">Rol:</label>
+          <select id="role" name="role">
+            <option value="admin">Administrador</option>
+            <option value="editor" selected>Editor</option>
+            <option value="viewer">Espectador</option>
+          </select>
+        </div>
 
-                <div class="field-group">
-                    <label>
-                        <input type="checkbox" name="terms" checked> Acepto los términos y condiciones
-                    </label>
-                </div>
+        <div class="field-group">
+          <label>
+            <input type="checkbox" name="terms" checked> Acepto los términos y condiciones
+          </label>
+        </div>
 
-                <button type="submit" class="btn-primary">Enviar Datos</button>
-            </form>
-        </section>
+        <button type="submit" class="btn-primary">Enviar Datos</button>
+      </form>
+    </section>
 
-        <!-- 3. Tablas y Multimedia -->
-        <section class="data-section">
-            <h3>Tabla de Datos</h3>
-            <table border="1">
-                <caption>Lista de Tecnologías</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Tecnología</th>
-                        <th scope="col">Tipo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>HTML5</td>
-                        <td>Estructura</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>CSS3</td>
-                        <td>Estilos</td>
-                    </tr>
-                </tbody>
-            </table>
+    <!-- 3. Tablas y Multimedia -->
+    <section class="data-section">
+      <h3>Tabla de Datos</h3>
+      <table border="1">
+        <caption>Lista de Tecnologías</caption>
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Tecnología</th>
+            <th scope="col">Tipo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>HTML5</td>
+            <td>Estructura</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>CSS3</td>
+            <td>Estilos</td>
+          </tr>
+        </tbody>
+      </table>
 
-            <div class="media-container">
-                <img src="assets/image.png" alt="Imagen de prueba" width="150" height="100">
-                <audio controls src="audio.mp3"></audio>
-            </div>
-        </section>
-    </main>
+      <div class="media-container">
+        <img src="assets/image.png" alt="Imagen de prueba" width="150" height="100">
+        <audio controls src="audio.mp3"></audio>
+      </div>
+    </section>
+  </main>
 
-    <!-- 4. Script embebido para probar JS dentro de HTML -->
-    <script>
-        const config = {
-            appName: "TestTheme",
-            version: 1.0,
-            isActive: true
-        };
+  <!-- 4. Script embebido para probar JS dentro de HTML -->
+  <script>
+    const config = {
+      appName: "TestTheme",
+      version: 1.0,
+      isActive: true
+    };
 
-        function initApp(name) {
-            console.log(`Iniciando aplicación: ${name}`);
-            const element = document.querySelector('#top-document');
+    function initApp(name) {
+      console.log(`Iniciando aplicación: ${name}`);
+      const element = document.querySelector('#top-document');
 
-            if (element && config.isActive) {
-                element.classList.add('loaded');
-            }
-        }
+      if (element && config.isActive) {
+        element.classList.add('loaded');
+      }
+    }
 
-        initApp(config.appName);
-    </script>
+    initApp(config.appName);
+  </script>
 </body>
 </html>
