@@ -1,5 +1,5 @@
 {
-  "publisher": "luis-monsalve",
+  "publisher": "LuisMonsalve",
   "name": "aesthetic-theme",
   "displayName": "Aesthetic's Theme",
   "description": "A minimal, aesthetic dark theme crafted for a clean coding experience.",
@@ -51,10 +51,10 @@
     "watch": "bun --hot src/global/util/generate_theme.ts",
     "build": "tsup src/index.ts --format cjs --external vscode && npm run build:theme",
     "package": "vsce package --no-dependencies",
-    "publish": "vsxpub --no-dependencies"
+    "publish": "vsce publish --no-dependencies"
   },
   "devDependencies": {
-    "@types/node": "26.4.1",
+    "@types/node": "22.20.2",
     "@types/vscode": "1.125.0",
     "@vscode/vsce": "3.9.2",
     "eslint-config-universal-code": "1.1.2",
