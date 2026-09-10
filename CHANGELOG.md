@@ -16,6 +16,11 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.1] - 2026-09-10
+
+- **fix:** correct displayName and streamline release and build scripts in package.json [`4d3a43d`](https://github.com/TheElegantCoding/aesthetic-theme/commit/4d3a43d) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** correct publisher name and update @types/node version in package.json [`4762bb3`](https://github.com/TheElegantCoding/aesthetic-theme/commit/4762bb3) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.0] - 2026-09-05
 
 - **asset:** add new icon for enhanced visual assets [`87ca3e8`](https://github.com/TheElegantCoding/aesthetic-theme/commit/87ca3e8) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
