@@ -1,7 +1,7 @@
 {
   "publisher": "LuisMonsalve",
   "name": "aesthetic-theme",
-  "displayName": "Aesthetic's Theme",
+  "displayName": "Aesthetic Theme",
   "description": "A minimal, aesthetic dark theme crafted for a clean coding experience.",
   "author": "Luis Monsalve",
   "license": "MIT",
@@ -45,11 +45,10 @@
     "postinstall": "bunx gitlys init",
     "preinstall": "npx only-allow bun",
     "typecheck": "tsc --noEmit",
-    "release": "bun run build:theme && bunx gitlys release && bun run package && bun run publish",
+    "release": "bun run build && bunx gitlys release && bun run package && bun run publish",
     "lint": "eslint --fix",
-    "build:theme": "bun src/global/util/generate_theme.ts",
+    "build": "bun src/global/util/generate_theme.ts",
     "watch": "bun --hot src/global/util/generate_theme.ts",
-    "build": "tsup src/index.ts --format cjs --external vscode && npm run build:theme",
     "package": "vsce package --no-dependencies",
     "publish": "vsce publish --no-dependencies"
   },
